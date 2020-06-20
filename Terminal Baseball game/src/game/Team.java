@@ -1,100 +1,98 @@
 /*
- * Writer: ÀÌ¿ì¼º
- * StudentID: 20155758
- * Program: GameApp Å¬·¡½º¿¡¼­ »ç¿ëÇÒ Team °´Ã¼¸¦ Á¤ÀÇÇÏ´Â Å¬·¡½º
+ * Program: GameApp í´ë˜ìŠ¤ì—ì„œ ì‚¬ìš©í•  Team ê°ì²´ë¥¼ ì •ì˜í•˜ëŠ” í´ë˜ìŠ¤
  */
 
 package game;
 import player.*;
 
 public class Team {
-	private Hitter[] hitter = new Hitter[9];	// 9¸íÀÇ Å¸ÀÚ °´Ã¼¸¦ ¹è¿­·Î °ü¸®
-	private Pitcher pitcher = new Pitcher();	// Åõ¼ö °´Ã¼ 
-	private int hitterTurn = 0; 				// Å¸¼®¿¡ µé¾î°¥ Å¸ÀÚÀÇ ¼ø¼­
+	private Hitter[] hitter = new Hitter[9];	// 9ëª…ì˜ íƒ€ì ê°ì²´ë¥¼ ë°°ì—´ë¡œ ê´€ë¦¬
+	private Pitcher pitcher = new Pitcher();	// íˆ¬ìˆ˜ ê°ì²´ 
+	private int hitterTurn = 0; 				// íƒ€ì„ì— ë“¤ì–´ê°ˆ íƒ€ìì˜ ìˆœì„œ
 
-	//// Å¸ÀÚ ¸Ş¼­µå
-	// Å¸¼øº°·Î ÀÌ¸§°ú Æ÷Áö¼ÇÀ» ÀúÀåÇÏ´Â ¸Ş¼­µå
+	//// íƒ€ì ë©”ì„œë“œ
+	// íƒ€ìˆœë³„ë¡œ ì´ë¦„ê³¼ í¬ì§€ì…˜ì„ ì €ì¥í•˜ëŠ” ë©”ì„œë“œ
 	public void setHitter(String name, String pos, int i) {
 		this.hitter[i] = new Hitter();
 		this.hitter[i].setName(name);
 		this.hitter[i].setPosition(pos);
 	};
 	
-	// °æ±â Áß Å¸ÀÚÀÇ ±â·ÏÀ» ³ªÅ¸³»´Â ¸Ş¼­µå
+	// ê²½ê¸° ì¤‘ íƒ€ìì˜ ê¸°ë¡ì„ ë‚˜íƒ€ë‚´ëŠ” ë©”ì„œë“œ
 	public void showHitterRecord() {
-		// Å¸¼ø | ÀÌ¸§ | ´çÀÏ ¼ºÀû Ãâ·Â
-		System.out.print("| "+Integer.toString(this.hitterTurn+1)+"¹øÅ¸ÀÚ | ");
+		// íƒ€ìˆœ | ì´ë¦„ | ë‹¹ì¼ ì„±ì  ì¶œë ¥
+		System.out.print("| "+Integer.toString(this.hitterTurn+1)+"ë²ˆíƒ€ì | ");
 		this.hitter[this.hitterTurn].showRecord();
 	}
 	
-	// Å¸ÀÚ°¡ Ä£ ¾ÈÅ¸¸¦ ±â·ÏÇÏ´Â ¸Ş¼­µå
+	// íƒ€ìê°€ ì¹œ ì•ˆíƒ€ë¥¼ ê¸°ë¡í•˜ëŠ” ë©”ì„œë“œ
 	public void hit(int hit_flag) {			
 		this.hitter[this.hitterTurn].hit(hit_flag);
 	}
 	
-	// Å¸ÀÚÀÇ ¾Æ¿ôÀ» ±â·ÏÇÏ´Â ¸Ş¼­µå
+	// íƒ€ìì˜ ì•„ì›ƒì„ ê¸°ë¡í•˜ëŠ” ë©”ì„œë“œ
 	public void out() {
 		this.hitter[this.hitterTurn].out();
 	}
 	
-	// Å¸ÀÚÀÇ Å¸¼øÀ» Áõ°¡½ÃÅ°´Â ¸Ş¼­µå
+	// íƒ€ìì˜ íƒ€ìˆœì„ ì¦ê°€ì‹œí‚¤ëŠ” ë©”ì„œë“œ
 	public void incHitterturn() {
 		this.hitterTurn = (this.hitterTurn+1)%9;
 	}
 	
-	//// Åõ¼ö ¸Ş¼­µå
-	// Åõ¼öÀÇ ÀÌ¸§°ú Æ÷Áö¼ÇÀ» ÀúÀåÇÏ´Â ¸Ş¼­µå
+	//// íˆ¬ìˆ˜ ë©”ì„œë“œ
+	// íˆ¬ìˆ˜ì˜ ì´ë¦„ê³¼ í¬ì§€ì…˜ì„ ì €ì¥í•˜ëŠ” ë©”ì„œë“œ
 	public void setPitcher(String name, String pos) {
 		this.pitcher.setName(name);
 		this.pitcher.setPosition(pos);
 	}
 	
-	// Åõ¼öÀÇ ±â·ÏÀ» Ãâ·ÂÇÏ´Â ¸Ş¼­µå
+	// íˆ¬ìˆ˜ì˜ ê¸°ë¡ì„ ì¶œë ¥í•˜ëŠ” ë©”ì„œë“œ
 	public void showPitcher() {
 		this.pitcher.showRecord();
 	}
 	
-	// Åõ¼öÀÇ Å»»ïÁøÀ» ±â·ÏÇÏ´Â ¸Ş¼­µå
+	// íˆ¬ìˆ˜ì˜ íƒˆì‚¼ì§„ì„ ê¸°ë¡í•˜ëŠ” ë©”ì„œë“œ
 	public void increaseK() {
 		this.pitcher.incK();
 	}
 	
-	// Åõ¼öÀÇ Åõ±¸¼ö¸¦ Áõ°¡½ÃÅ°´Â ¸Ş¼­µå
+	// íˆ¬ìˆ˜ì˜ íˆ¬êµ¬ìˆ˜ë¥¼ ì¦ê°€ì‹œí‚¤ëŠ” ë©”ì„œë“œ
 	public void incBalls() {
 		this.pitcher.incBall();
 	}
 	
-	//// ÆÀÀ» Ãâ·ÂÇÏ´Â ¸Ş¼­µå 
-	// ÆÀ ÀüÃ¼¸¦ Ãâ·Â
+	//// íŒ€ì„ ì¶œë ¥í•˜ëŠ” ë©”ì„œë“œ 
+	// íŒ€ ì „ì²´ë¥¼ ì¶œë ¥
 	public void printPlayer(String teamname) {
-		System.out.println("´ç½ÅÀÇ ÆÀ  < "+teamname+" >");
+		System.out.println("ë‹¹ì‹ ì˜ íŒ€  < "+teamname+" >");
 		System.out.println("__________________");
-		System.out.println("Å¸¼ø  ÀÌ¸§   Æ÷Áö¼Ç");
+		System.out.println("íƒ€ìˆœ  ì´ë¦„   í¬ì§€ì…˜");
 		System.out.println("------------------");
 		for(int i=0; i<9; i++) {
-			System.out.print(Integer.toString(i+1)+"¹ø ");
+			System.out.print(Integer.toString(i+1)+"ë²ˆ ");
 			hitter[i].print();
 		}
 		System.out.println("__________________");
-		System.out.println("¼±¹ßÅõ¼ö");
+		System.out.println("ì„ ë°œíˆ¬ìˆ˜");
 		System.out.println("------------------");
 		pitcher.print();
 		System.out.println("__________________\n");
 	}
 	
-	// °æ±â Á¾·á ÈÄ ¼ºÀûÀ» Ãâ·ÂÇÏ´Â ¸Ş¼­µå
+	// ê²½ê¸° ì¢…ë£Œ í›„ ì„±ì ì„ ì¶œë ¥í•˜ëŠ” ë©”ì„œë“œ
 	public void printRecord() {
 		System.out.println("__________________");
-		System.out.println("           ÃÖÁ¾±â·Ï        ");
+		System.out.println("           ìµœì¢…ê¸°ë¡        ");
 		System.out.println("__________________");
-		System.out.println("Å¸¼ø  ÀÌ¸§   Å¸À²    ¾ÈÅ¸");
+		System.out.println("íƒ€ìˆœ  ì´ë¦„   íƒ€ìœ¨    ì•ˆíƒ€");
 		System.out.println("------------------");
 		for(int i=0; i<9; i++) {
-			System.out.print(Integer.toString(i+1)+"¹ø ");
+			System.out.print(Integer.toString(i+1)+"ë²ˆ ");
 			hitter[i].showAllRecord();
 		}
 		System.out.println("__________________");
-		System.out.println(" ÀÌ¸§    Åõ±¸¼ö   Å»»ïÁø");
+		System.out.println(" ì´ë¦„    íˆ¬êµ¬ìˆ˜   íƒˆì‚¼ì§„");
 		pitcher.showAllRecord();
 		System.out.println("__________________\n");
 	}
