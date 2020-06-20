@@ -1,19 +1,17 @@
 /*
- * Writer 	 : ÀÌ¿ì¼º
- * StudentID : 20155758
- * Program 	 : GameApp Å¬·¡½º¿¡¼­ »ç¿ëÇÒ Å¸ÀÚ °´Ã¼¸¦ Á¤ÀÇÇÏ´Â Å¬·¡½º
+ * Program 	 : GameApp í´ë˜ìŠ¤ì—ì„œ ì‚¬ìš©í•  íƒ€ì ê°ì²´ë¥¼ ì •ì˜í•˜ëŠ” í´ë˜ìŠ¤
  */
 
 package player;
 
 public class Hitter extends Player{
-	private int[] H = new int[4]; // ¾ÈÅ¸(Hits) H[0]: 1·çÅ¸, H[1]: 2·çÅ¸, H[2]:3·çÅ¸, H[3]:È¨·±
-	private int TH = 0; // ÀüÃ¼ ¾ÈÅ¸ °³¼ö(Total Hits)
- 	private int AB = 0; // Å¸¼ö(At Bats)
- 	private int SB = 0; // µµ·ç(Stolen Base)
-	private float AVG = 0; // Å¸À²(Batting Average)
+	private int[] H = new int[4]; // ì•ˆíƒ€(Hits) H[0]: 1ë£¨íƒ€, H[1]: 2ë£¨íƒ€, H[2]:3ë£¨íƒ€, H[3]:í™ˆëŸ°
+	private int TH = 0; // ì „ì²´ ì•ˆíƒ€ ê°œìˆ˜(Total Hits)
+ 	private int AB = 0; // íƒ€ìˆ˜(At Bats)
+ 	private int SB = 0; // ë„ë£¨(Stolen Base)
+	private float AVG = 0; // íƒ€ìœ¨(Batting Average)
 	
-	// ¾ÈÅ¸¸¦ ÃÆÀ» ¶§ È£ÃâÇÏ´Â ÇÔ¼ö
+	// ì•ˆíƒ€ë¥¼ ì³¤ì„ ë•Œ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜
 	public void hit(int hit_flag) {	
 		switch(hit_flag) {
 			case 1:
@@ -25,28 +23,28 @@ public class Hitter extends Player{
 			case 4:
 				this.H[3]++;
 		}
-		this.TH++;	// ÀüÃ¼ ¾ÈÅ¸ Áõ°¡
-		this.AB++;	// ÀüÃ¼ Å¸¼ö Áõ°¡
-		calAVG();	// Å¸À² °è»ê
+		this.TH++;	// ì „ì²´ ì•ˆíƒ€ ì¦ê°€
+		this.AB++;	// ì „ì²´ íƒ€ìˆ˜ ì¦ê°€
+		calAVG();	// íƒ€ìœ¨ ê³„ì‚°
 	}
 	
-	// ¾Æ¿ôÀÌ µÆÀ» ¶§ È£ÃâÇÏ´Â ÇÔ¼ö
+	// ì•„ì›ƒì´ ëì„ ë•Œ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜
 	public void out() {
-		this.AB++;	// ÀüÃ¼ Å¸¼ö Áõ°¡
-		calAVG();	// Å¸À² °è»ê
+		this.AB++;	// ì „ì²´ íƒ€ìˆ˜ ì¦ê°€
+		calAVG();	// íƒ€ìœ¨ ê³„ì‚°
 	}
 	
-	// Å¸À²À» °è»êÇÏ´Â ÇÔ¼ö
-	public void calAVG() {			// Å¸À²À» °è»êÇÏ´Â ÇÔ¼ö
-		this.AVG = this.TH/this.AB; // Å¸À² = ÀüÃ¼ ¾ÈÅ¸ ¼ö / ÀüÃ¼ Å¸À² ¼ö
+	// íƒ€ìœ¨ì„ ê³„ì‚°í•˜ëŠ” í•¨ìˆ˜
+	public void calAVG() {			// íƒ€ìœ¨ì„ ê³„ì‚°í•˜ëŠ” í•¨ìˆ˜
+		this.AVG = this.TH/this.AB; // íƒ€ìœ¨ = ì „ì²´ ì•ˆíƒ€ ìˆ˜ / ì „ì²´ íƒ€ìœ¨ ìˆ˜
 	}
 	
-	// Å¸¼®¿¡ µé¾î¼³ ¶§ ±â·ÏÀ» º¸¿©ÁÖ´Â ÇÔ¼ö
+	// íƒ€ì„ì— ë“¤ì–´ì„¤ ë•Œ ê¸°ë¡ì„ ë³´ì—¬ì£¼ëŠ” í•¨ìˆ˜
 	public void showRecord() {
-		System.out.println(this.name+" | \n| Å¸À²     : "+(Math.round(this.AVG*1000)/1000.0)+"  |\n| ´çÀÏ±â·Ï : "+this.TH+"¾ÈÅ¸ / "+this.AB+"Å¸¼ö |");
+		System.out.println(this.name+" | \n| íƒ€ìœ¨     : "+(Math.round(this.AVG*1000)/1000.0)+"  |\n| ë‹¹ì¼ê¸°ë¡ : "+this.TH+"ì•ˆíƒ€ / "+this.AB+"íƒ€ìˆ˜ |");
 	}
 	
-	// °æ±â Á¾·á ÈÄ ±×³¯ÀÇ ¼ºÀûÀ» º¸¿©ÁÖ´Â ÇÔ¼ö
+	// ê²½ê¸° ì¢…ë£Œ í›„ ê·¸ë‚ ì˜ ì„±ì ì„ ë³´ì—¬ì£¼ëŠ” í•¨ìˆ˜
 	public void showAllRecord() {
 		System.out.println(this.name+"  "+(Math.round(this.AVG*1000)/1000.0)+"  "+this.TH);
 	}
