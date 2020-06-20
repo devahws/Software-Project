@@ -1,38 +1,36 @@
 /*
- * Writer 	 : ÀÌ¿ì¼º
- * StudentID : 20155758
- * Program 	 : GameApp Å¬·¡½º¿¡¼­ »ç¿ëÇÒ Åõ¼ö °´Ã¼¸¦ Á¤ÀÇÇÏ´Â Å¬·¡½º
+ * Program 	 : GameApp í´ë˜ìŠ¤ì—ì„œ ì‚¬ìš©í•  íˆ¬ìˆ˜ ê°ì²´ë¥¼ ì •ì˜í•˜ëŠ” í´ë˜ìŠ¤
  */
 
 package player;
 
 public class Pitcher extends Player{
-	private int IP = 0; // Åõ±¸ ÀÌ´×(Innings Pitched)
-	private int BP = 0;	// Åõ±¸¼ö(Ball Pitched)
-	private int W = 0; 	// ½Â¸® È½¼ö(Wins)
-	private int L = 0; 	// ÆĞÀü È½¼ö(Loses)
-	private float ERA = 0; // ¹æ¾îÀ²(Earned Run Average)
-	private int BB = 0; // º¼³İ(Base on Balls)
-	private int K = 0; 	// »ïÁø
+	private int IP = 0; // íˆ¬êµ¬ ì´ë‹(Innings Pitched)
+	private int BP = 0;	// íˆ¬êµ¬ìˆ˜(Ball Pitched)
+	private int W = 0; 	// ìŠ¹ë¦¬ íšŸìˆ˜(Wins)
+	private int L = 0; 	// íŒ¨ì „ íšŸìˆ˜(Loses)
+	private float ERA = 0; // ë°©ì–´ìœ¨(Earned Run Average)
+	private int BB = 0; // ë³¼ë„·(Base on Balls)
+	private int K = 0; 	// ì‚¼ì§„
 	
-	// °æ±â Áß ¼ºÀûÀ» Ãâ·ÂÇÏ´Â ¸Ş¼­µå
+	// ê²½ê¸° ì¤‘ ì„±ì ì„ ì¶œë ¥í•˜ëŠ” ë©”ì„œë“œ
 	public void showRecord() {
-		System.out.println("| Åõ¼ö | "+this.name +" |\n| Åõ±¸¼ö | "+this.BP+"°³ |");
-		System.out.println("| Å»»ïÁø | "+this.K+"°³ |");
+		System.out.println("| íˆ¬ìˆ˜ | "+this.name +" |\n| íˆ¬êµ¬ìˆ˜ | "+this.BP+"ê°œ |");
+		System.out.println("| íƒˆì‚¼ì§„ | "+this.K+"ê°œ |");
 		System.out.println("_____________________\n");
 	}
 	
-	// °æ±â Á¾·á ÈÄ ±×³¯ÀÇ ¼ºÀûÀ» º¸¿©ÁÖ´Â ¸Ş¼­µå
+	// ê²½ê¸° ì¢…ë£Œ í›„ ê·¸ë‚ ì˜ ì„±ì ì„ ë³´ì—¬ì£¼ëŠ” ë©”ì„œë“œ
 	public void showAllRecord() {
 		System.out.println(this.name+"   "+this.BP+"     "+this.K);
 	}
 	
-	// Åõ±¸¼ö¸¦ Áõ°¡½ÃÅ°´Â ¸Ş¼­µå
+	// íˆ¬êµ¬ìˆ˜ë¥¼ ì¦ê°€ì‹œí‚¤ëŠ” ë©”ì„œë“œ
 	public void incBall() {
 		this.BP++;
 	}
 	
-	// Å»»ïÁøÀ» Áõ°¡½ÃÅ°´Â ¸Ş¼­µå
+	// íƒˆì‚¼ì§„ì„ ì¦ê°€ì‹œí‚¤ëŠ” ë©”ì„œë“œ
 	public void incK() {
 		this.K++;
 	}
