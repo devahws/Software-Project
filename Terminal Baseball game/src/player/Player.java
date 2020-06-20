@@ -1,26 +1,24 @@
 /*
- * Writer : ÀÌ¿ì¼º
- * StudentID : 20155758
- * Program: Hitter Å¬·¡½º¿Í Pitcher Å¬·¡½º°¡ »ó¼Ó¹Ş´Â ½´ÆÛ Å¬·¡½º
+ * Program: Hitter í´ë˜ìŠ¤ì™€ Pitcher í´ë˜ìŠ¤ê°€ ìƒì†ë°›ëŠ” ìŠˆí¼ í´ë˜ìŠ¤
  */
 
 package player;
 
 public class Player {
-	protected String name;		// ¼±¼öÀÇ ÀÌ¸§
-	protected String position;	// ¼±¼öÀÇ Æ÷Áö¼Ç
+	protected String name;		// ì„ ìˆ˜ì˜ ì´ë¦„
+	protected String position;	// ì„ ìˆ˜ì˜ í¬ì§€ì…˜
 	
-	// ¼±¼öÀÇ ÀÌ¸§À» ÀúÀåÇÏ´Â ¸Ş¼­µå
+	// ì„ ìˆ˜ì˜ ì´ë¦„ì„ ì €ì¥í•˜ëŠ” ë©”ì„œë“œ
 	public void setName(String new_name) {
 		this.name = new_name;
 	}
 	
-	// ¼±¼öÀÇ Æ÷Áö¼ÇÀ» Á¤ÇÏ´Â ¸Ş¼­µå
+	// ì„ ìˆ˜ì˜ í¬ì§€ì…˜ì„ ì •í•˜ëŠ” ë©”ì„œë“œ
 	public void setPosition(String pos) {
 		this.position = pos;
 	}
 	
-	// ¼±¼öÀÇ ÀÌ¸§°ú Æ÷Áö¼ÇÀ» Ãâ·ÂÇÏ´Â ¸Ş¼­µå
+	// ì„ ìˆ˜ì˜ ì´ë¦„ê³¼ í¬ì§€ì…˜ì„ ì¶œë ¥í•˜ëŠ” ë©”ì„œë“œ
 	public void print() {
 		System.out.println(this.name+" "+this.position);
 	}
