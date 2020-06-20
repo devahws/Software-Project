@@ -1,25 +1,23 @@
 /*
- * Writer 	: ÀÌ¿ì¼º
- * StudentID: 20155758
- * Program	: ¾ß±¸ °ÔÀÓÀÌ ÁøÇàµÇ´Â ¸ŞÀÎ ÇÁ·Î±×·¥
- * CAUTION 	: ÄÜ¼Ö ÀÔ·Â¿¡´Â ¿À·ÎÁö ¼ıÀÚ ÀÔ·Â¸¸ °¡´ÉÇÕ´Ï´Ù!
+ * Program	: ì•¼êµ¬ ê²Œì„ì´ ì§„í–‰ë˜ëŠ” ë©”ì¸ í”„ë¡œê·¸ë¨
+ * CAUTION 	: ì½˜ì†” ì…ë ¥ì—ëŠ” ì˜¤ë¡œì§€ ìˆ«ì ì…ë ¥ë§Œ ê°€ëŠ¥í•©ë‹ˆë‹¤!
  * How To Play
- * 	1) °ÔÀÓÀÌ ½ÃÀÛµÇ¸é ÄÜ¼ÖÃ¢¿¡ ¼ıÀÚ 1 ¶Ç´Â 2¸¦ ÀÔ·ÂÇØ¼­ ÆÀÀ» ¼±ÅÃÇÕ´Ï´Ù.
- * 	2) ÆÀÀ» ¼±ÅÃÇßÀ¸¸é °ÔÀÓÀ» ÁøÇàÇÒ ÀÌ´×À» ÀÔ·ÂÇÕ´Ï´Ù.
- * 	3) 1¹ø ÆÀÀ» ¼±ÅÃÇÏ¸é ¼±°ø, 2¹ø ÆÀÀ» ¼±ÅÃÇÏ¸é ÈÄ°øÀ» ÇÏ°Ô µË´Ï´Ù.
+ * 	1) ê²Œì„ì´ ì‹œì‘ë˜ë©´ ì½˜ì†”ì°½ì— ìˆ«ì 1 ë˜ëŠ” 2ë¥¼ ì…ë ¥í•´ì„œ íŒ€ì„ ì„ íƒí•©ë‹ˆë‹¤.
+ * 	2) íŒ€ì„ ì„ íƒí–ˆìœ¼ë©´ ê²Œì„ì„ ì§„í–‰í•  ì´ë‹ì„ ì…ë ¥í•©ë‹ˆë‹¤.
+ * 	3) 1ë²ˆ íŒ€ì„ ì„ íƒí•˜ë©´ ì„ ê³µ, 2ë²ˆ íŒ€ì„ ì„ íƒí•˜ë©´ í›„ê³µì„ í•˜ê²Œ ë©ë‹ˆë‹¤.
  * 	** Attack
- * 		1) ÄÜ¼ÖÃ¢¿¡ ¼ıÀÚ 1À» ÀÔ·ÂÇÏ¸é ½ºÀ®, 2¸¦ ÀÔ·ÂÇÏ¸é ½ºÀ®ÇÏÁö ¾Ê°í ±â´Ù¸³´Ï´Ù.
- * 		2) ½ºÀ®(1¹ø)À» ¼±ÅÃÇÏ¸é °ÔÀÓ ³»¿¡ Á¤ÇØÁø È®·ü¿¡ µû¶ó Çê½ºÀ®, ¶¥º¼, ¶áº¼, ¾ÈÅ¸, 2·çÅ¸, 3·çÅ¸, È¨·±ÀÌ °áÁ¤µË´Ï´Ù.
- * 		3) ±â´Ù¸®´Â °É(2¹ø) ¼±ÅÃÇÏ¸é °ÔÀÓ ³»¿¡ Á¤ÇØÁø È®·ü¿¡ µû¶ó ½ºÆ®¶óÀÌÅ©, ¶Ç´Â º¼ÀÌ °áÁ¤µË´Ï´Ù.
- * 		4) ½ÇÁ¦ ¾ß±¸ ±ÔÄ¢°ú ¸¶Âù°¡Áö·Î ¾Æ¿ôÄ«¿îÆ®°¡ 3°³°¡ µÇ¸é °ø°İ ¸ğµå°¡ Á¾·áµÇ°í ¼öºñ ¸ğµå·Î ¹Ù²ò´Ï´Ù.
+ * 		1) ì½˜ì†”ì°½ì— ìˆ«ì 1ì„ ì…ë ¥í•˜ë©´ ìŠ¤ìœ™, 2ë¥¼ ì…ë ¥í•˜ë©´ ìŠ¤ìœ™í•˜ì§€ ì•Šê³  ê¸°ë‹¤ë¦½ë‹ˆë‹¤.
+ * 		2) ìŠ¤ìœ™(1ë²ˆ)ì„ ì„ íƒí•˜ë©´ ê²Œì„ ë‚´ì— ì •í•´ì§„ í™•ë¥ ì— ë”°ë¼ í—›ìŠ¤ìœ™, ë•…ë³¼, ëœ¬ë³¼, ì•ˆíƒ€, 2ë£¨íƒ€, 3ë£¨íƒ€, í™ˆëŸ°ì´ ê²°ì •ë©ë‹ˆë‹¤.
+ * 		3) ê¸°ë‹¤ë¦¬ëŠ” ê±¸(2ë²ˆ) ì„ íƒí•˜ë©´ ê²Œì„ ë‚´ì— ì •í•´ì§„ í™•ë¥ ì— ë”°ë¼ ìŠ¤íŠ¸ë¼ì´í¬, ë˜ëŠ” ë³¼ì´ ê²°ì •ë©ë‹ˆë‹¤.
+ * 		4) ì‹¤ì œ ì•¼êµ¬ ê·œì¹™ê³¼ ë§ˆì°¬ê°€ì§€ë¡œ ì•„ì›ƒì¹´ìš´íŠ¸ê°€ 3ê°œê°€ ë˜ë©´ ê³µê²© ëª¨ë“œê°€ ì¢…ë£Œë˜ê³  ìˆ˜ë¹„ ëª¨ë“œë¡œ ë°”ë€ë‹ˆë‹¤.
  * 	** Defense
- * 		1) ÄÜ¼ÖÃ¢¿¡¼­ ¼ıÀÚ 1 ~ 3 Áß ÇÏ³ª¸¦ ÀÔ·ÂÇØ¼­ ±¸Á¾À» ¼±ÅÃÇÕ´Ï´Ù.
- * 		2) ´ÙÀ½À¸·Î´Â ¼ıÀÚ 1 ~ 9 Áß ÇÏ³ª¸¦ ÀÔ·ÂÇØ¼­ ½ºÆ®¶óÀÌÅ© Á¸¿¡¼­ ´øÁú ¿µ¿ªÀ» ¼±ÅÃÇÕ´Ï´Ù.
- * 		3) ±¸Á¾°ú ½ºÆ®¶óÀÌÅ© Á¸À» ¼±ÅÃÇÏ¸é °ÔÀÓ ³»¿¡ Á¤ÀÇµÈ °ø½ÄÀ» ÅëÇØ º¼, ½ºÆ®¶óÀÌÅ©, ¶¥º¼, ¶áº¼, ¾ÈÅ¸, 2·çÅ¸, 3·çÅ¸, È¨·±ÀÌ °áÁ¤µË´Ï´Ù.
- * 		4) ½ÇÁ¦ ¾ß±¸ ±ÔÄ¢°ú ¸¶Âù°¡Áö·Î ¾Æ¿ôÄ«¿îÆ®°¡ 3°³°¡ µÇ¸é ¼öºñ ¸ğµå°¡ Á¾·áµÇ°í °ø°İ ¸ğµå·Î ¹Ù²ò´Ï´Ù.
+ * 		1) ì½˜ì†”ì°½ì—ì„œ ìˆ«ì 1 ~ 3 ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•´ì„œ êµ¬ì¢…ì„ ì„ íƒí•©ë‹ˆë‹¤.
+ * 		2) ë‹¤ìŒìœ¼ë¡œëŠ” ìˆ«ì 1 ~ 9 ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•´ì„œ ìŠ¤íŠ¸ë¼ì´í¬ ì¡´ì—ì„œ ë˜ì§ˆ ì˜ì—­ì„ ì„ íƒí•©ë‹ˆë‹¤.
+ * 		3) êµ¬ì¢…ê³¼ ìŠ¤íŠ¸ë¼ì´í¬ ì¡´ì„ ì„ íƒí•˜ë©´ ê²Œì„ ë‚´ì— ì •ì˜ëœ ê³µì‹ì„ í†µí•´ ë³¼, ìŠ¤íŠ¸ë¼ì´í¬, ë•…ë³¼, ëœ¬ë³¼, ì•ˆíƒ€, 2ë£¨íƒ€, 3ë£¨íƒ€, í™ˆëŸ°ì´ ê²°ì •ë©ë‹ˆë‹¤.
+ * 		4) ì‹¤ì œ ì•¼êµ¬ ê·œì¹™ê³¼ ë§ˆì°¬ê°€ì§€ë¡œ ì•„ì›ƒì¹´ìš´íŠ¸ê°€ 3ê°œê°€ ë˜ë©´ ìˆ˜ë¹„ ëª¨ë“œê°€ ì¢…ë£Œë˜ê³  ê³µê²© ëª¨ë“œë¡œ ë°”ë€ë‹ˆë‹¤.
  * *** Etc
- * 		1) ½ºÄÚ¾î´Â ÀÌ´×ÀÌ ±³Ã¼µÉ ¶§, ±×¸®°í Á¡¼ö¿¡ º¯È­°¡ ÀÖÀ» ¶§ Ãâ·ÂµË´Ï´Ù.
- * 		2) °æ±â°¡ Á¾·áµÈ µÚ¿¡´Â »ç¿ëÀÚ°¡ ¼±ÅÃÇÑ ÆÀ ¼±¼öµéÀÇ ´çÀÏ ±â·ÏÀÌ Ãâ·ÂµË´Ï´Ù.
+ * 		1) ìŠ¤ì½”ì–´ëŠ” ì´ë‹ì´ êµì²´ë  ë•Œ, ê·¸ë¦¬ê³  ì ìˆ˜ì— ë³€í™”ê°€ ìˆì„ ë•Œ ì¶œë ¥ë©ë‹ˆë‹¤.
+ * 		2) ê²½ê¸°ê°€ ì¢…ë£Œëœ ë’¤ì—ëŠ” ì‚¬ìš©ìê°€ ì„ íƒí•œ íŒ€ ì„ ìˆ˜ë“¤ì˜ ë‹¹ì¼ ê¸°ë¡ì´ ì¶œë ¥ë©ë‹ˆë‹¤.
  */
 
 package game;
@@ -29,49 +27,49 @@ import java.util.*;
 import player.*;
 
 public class GameApp {
-	private Team team1;	// ÇÑÈ­ ÀÌ±Û½º
-	private Team team2;	// ¿¤Áö Æ®À©½º
+	private Team team1;	// í•œí™” ì´ê¸€ìŠ¤
+	private Team team2;	// ì—˜ì§€ íŠ¸ìœˆìŠ¤
 	
-	private int score_team1 = 0;	// ÇÑÈ­ ÀÌ±Û½ºÀÇ Á¡¼ö
-	private int score_team2 = 0;	// ¿¤Áö Æ®À©½ºÀÇ Á¡¼ö
+	private int score_team1 = 0;	// í•œí™” ì´ê¸€ìŠ¤ì˜ ì ìˆ˜
+	private int score_team2 = 0;	// ì—˜ì§€ íŠ¸ìœˆìŠ¤ì˜ ì ìˆ˜
 	
-	private int inning;				// °æ±â¿¡¼­ ÁøÇàÇÒ ÃÑ ÀÌ´×
-	int gameinning = 1;				// ½ÇÁ¦ ÁøÇàÁßÀÎ ÀÌ´×
+	private int inning;				// ê²½ê¸°ì—ì„œ ì§„í–‰í•  ì´ ì´ë‹
+	int gameinning = 1;				// ì‹¤ì œ ì§„í–‰ì¤‘ì¸ ì´ë‹
 	
-	private int[] BASE = new int[3];	// °ÔÀÓ¿¡¼­ »ç¿ëÇÒ º£ÀÌ½º
-	private boolean teamFlag = true;  	// ÆÀ ¼±ÅÃ
-	// true -> ÇÑÈ­ ÀÌ±Û½º (¿øÁ¤ÆÀ. ÃÊ °ø°İ)
-	// false -> ¿¤Áö Æ®À©½º(È¨ÆÀ. ¸» °ø°İ)
-	private boolean hitFlag = false;	// ¾ÈÅ¸ ¹ß»ıÇÏ¸é º¯È­
-	private boolean outFlag = false;	// ¾Æ¿ô ¹ß»ıÇÏ¸é º¯È­
-	private boolean onBaseFlag = false; // ÁÖÀÚÀÇ Ãâ·ç ¹ß»ıÇÏ¸é º¯È­
-	private boolean kSign = false; 		// »ïÁø ¹ß»ıÇÏ¸é º¯È­
-	private boolean scoreFlag = false; 	// Á¡¼ö°¡ Áõ°¡ÇÏ¸é º¯È­
+	private int[] BASE = new int[3];	// ê²Œì„ì—ì„œ ì‚¬ìš©í•  ë² ì´ìŠ¤
+	private boolean teamFlag = true;  	// íŒ€ ì„ íƒ
+	// true -> í•œí™” ì´ê¸€ìŠ¤ (ì›ì •íŒ€. ì´ˆ ê³µê²©)
+	// false -> ì—˜ì§€ íŠ¸ìœˆìŠ¤(í™ˆíŒ€. ë§ ê³µê²©)
+	private boolean hitFlag = false;	// ì•ˆíƒ€ ë°œìƒí•˜ë©´ ë³€í™”
+	private boolean outFlag = false;	// ì•„ì›ƒ ë°œìƒí•˜ë©´ ë³€í™”
+	private boolean onBaseFlag = false; // ì£¼ìì˜ ì¶œë£¨ ë°œìƒí•˜ë©´ ë³€í™”
+	private boolean kSign = false; 		// ì‚¼ì§„ ë°œìƒí•˜ë©´ ë³€í™”
+	private boolean scoreFlag = false; 	// ì ìˆ˜ê°€ ì¦ê°€í•˜ë©´ ë³€í™”
 	
-	private boolean myAttack = true;	// »ç¿ëÀÚÀÇ °ø°İÂ÷·Ê¿Í ÄÄÇ»ÅÍÀÇ °ø°İÂ÷·Ê ±¸ºĞ
+	private boolean myAttack = true;	// ì‚¬ìš©ìì˜ ê³µê²©ì°¨ë¡€ì™€ ì»´í“¨í„°ì˜ ê³µê²©ì°¨ë¡€ êµ¬ë¶„
 	
-	int OC = 0; 					// ¾Æ¿ô Ä«¿îÆ®(Out Counts)
-	int[] BC = new int[2]; 			// º¼ Ä«¿îÆ®(Ball Counts) 
-	// BC[0] = ½ºÆ®¶óÀÌÅ© Ä«¿îÆ®
-	// BC[1] = º¼ Ä«¿îÆ®
+	int OC = 0; 					// ì•„ì›ƒ ì¹´ìš´íŠ¸(Out Counts)
+	int[] BC = new int[2]; 			// ë³¼ ì¹´ìš´íŠ¸(Ball Counts) 
+	// BC[0] = ìŠ¤íŠ¸ë¼ì´í¬ ì¹´ìš´íŠ¸
+	// BC[1] = ë³¼ ì¹´ìš´íŠ¸
 	
-	//// Team °´Ã¼¸¦ »ı¼ºÇÏ°í ÆÄÀÏÀ» ÀĞ¾î¿Í¼­ ¼¼ÆÃÇÏ´Â ¸Ş¼­µå
-	// ¸Å°³º¯¼ö·Î ¹Ş´Â ÀÌ¸§ÀÇ ÆÄÀÏ¿¡ ÀúÀåµÈ ¼±¼ö ¸ñ·ÏÀ» °¡Á®¿Í¼­ ÀúÀå
+	//// Team ê°ì²´ë¥¼ ìƒì„±í•˜ê³  íŒŒì¼ì„ ì½ì–´ì™€ì„œ ì„¸íŒ…í•˜ëŠ” ë©”ì„œë“œ
+	// ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ëŠ” ì´ë¦„ì˜ íŒŒì¼ì— ì €ì¥ëœ ì„ ìˆ˜ ëª©ë¡ì„ ê°€ì ¸ì™€ì„œ ì €ì¥
 	public Team saveTeam(String filename) throws IOException {	
-		Team team = new Team(); // Team °´Ã¼ »ı¼º
+		Team team = new Team(); // Team ê°ì²´ ìƒì„±
 		
 		File Team = new File(filename);
 		FileInputStream fin = new FileInputStream(Team);
 		InputStreamReader in = new InputStreamReader(fin, "utf-8");
 		BufferedReader br = new BufferedReader(in);
-		for(int i=0; i<9; i++) {		// 1¹øÅ¸ÀÚºÎÅÍ 9¹øÅ¸ÀÚ±îÁö ÀúÀå
+		for(int i=0; i<9; i++) {		// 1ë²ˆíƒ€ìë¶€í„° 9ë²ˆíƒ€ìê¹Œì§€ ì €ì¥
 			String line = br.readLine();
 			StringTokenizer st = new StringTokenizer(line, " ");
 			team.setHitter(st.nextToken(), st.nextToken(), i);
 		}
 		String line = br.readLine();
 		StringTokenizer st = new StringTokenizer(line, " ");
-		team.setPitcher(st.nextToken(), st.nextToken());	// Åõ¼ö ÀúÀå
+		team.setPitcher(st.nextToken(), st.nextToken());	// íˆ¬ìˆ˜ ì €ì¥
 		
 		fin.close();
 		in.close();
@@ -80,68 +78,68 @@ public class GameApp {
 		return team;	
 	}
 	
-	// ÇöÀç Á¡¼ö¸¦ º¸¿©ÁÖ´Â ¸Ş¼­µå
+	// í˜„ì¬ ì ìˆ˜ë¥¼ ë³´ì—¬ì£¼ëŠ” ë©”ì„œë“œ
 	public void showScore() {
-		System.out.println("< ÇÑÈ­ ÀÌ±Û½º |"+Integer.toString(this.score_team1)+"|:|"+Integer.toString(this.score_team2)+"| ¿¤Áö Æ®À©½º >\n");
+		System.out.println("< í•œí™” ì´ê¸€ìŠ¤ |"+Integer.toString(this.score_team1)+"|:|"+Integer.toString(this.score_team2)+"| ì—˜ì§€ íŠ¸ìœˆìŠ¤ >\n");
 	}
 	
-	// ÇöÀç ¾Æ¿ô Ä«¿îÆ®, º¼ Ä«¿îÆ®, º£ÀÌ½ºÀÇ ÁÖÀÚ¸¦ º¸¿©ÁÖ´Â ¸Ş¼­µå
+	// í˜„ì¬ ì•„ì›ƒ ì¹´ìš´íŠ¸, ë³¼ ì¹´ìš´íŠ¸, ë² ì´ìŠ¤ì˜ ì£¼ìë¥¼ ë³´ì—¬ì£¼ëŠ” ë©”ì„œë“œ
 	public void showCountBase() {
-		// ¾Æ¿ô Ä«¿îÆ®
+		// ì•„ì›ƒ ì¹´ìš´íŠ¸
 		System.out.print("O: ");
 		if(this.OC == 0)
-			System.out.print("¡Û ¡Û ");
+			System.out.print("â—‹ â—‹ ");
 		else if(this.OC == 1)
-			System.out.print("¡Û ¡Ü ");
+			System.out.print("â—‹ â— ");
 		else if(this.OC == 2)
-			System.out.print("¡Ü ¡Ü ");
-		// 2·ç º£ÀÌ½º
-		if(this.BASE[1] == 0)	// º£ÀÌ½º°¡ ºñ¾îÀÖÀ» ¶§
-			System.out.println("          ¡Ş");
-		else					// º£ÀÌ½º¿¡ ÁÖÀÚ°¡ ÀÖÀ» ¶§
-			System.out.println("          ¡ß");
-		// ½ºÆ®¶óÀÌÅ© Ä«¿îÆ®
+			System.out.print("â— â— ");
+		// 2ë£¨ ë² ì´ìŠ¤
+		if(this.BASE[1] == 0)	// ë² ì´ìŠ¤ê°€ ë¹„ì–´ìˆì„ ë•Œ
+			System.out.println("          â—‡");
+		else					// ë² ì´ìŠ¤ì— ì£¼ìê°€ ìˆì„ ë•Œ
+			System.out.println("          â—†");
+		// ìŠ¤íŠ¸ë¼ì´í¬ ì¹´ìš´íŠ¸
 		System.out.print("S: ");
 		if(this.BC[0] == 0)
-			System.out.print("¡Û ¡Û\n");
+			System.out.print("â—‹ â—‹\n");
 		else if(this.BC[0] == 1)
-			System.out.print("¡Û ¡Ü\n");
+			System.out.print("â—‹ â—\n");
 		else if(this.BC[0] == 2)
-			System.out.print("¡Ü ¡Ü\n");
-		// º¼ Ä«¿îÆ®
+			System.out.print("â— â—\n");
+		// ë³¼ ì¹´ìš´íŠ¸
 		System.out.print("B: ");
 		if(this.BC[1] == 0)
-			System.out.print("¡Û ¡Û ¡Û  ");
+			System.out.print("â—‹ â—‹ â—‹  ");
 		else if(this.BC[1] == 1)
-			System.out.print("¡Û ¡Û ¡Ü  ");
+			System.out.print("â—‹ â—‹ â—  ");
 		else if(this.BC[1] == 2)
-			System.out.print("¡Û ¡Ü ¡Ü  ");
+			System.out.print("â—‹ â— â—  ");
 		else if(this.BC[1] == 3)
-			System.out.print("¡Ü ¡Ü ¡Ü  ");
-		// 3·ç º£ÀÌ½º
+			System.out.print("â— â— â—  ");
+		// 3ë£¨ ë² ì´ìŠ¤
 		if(this.BASE[2] == 0)
-			System.out.print("¡Ş   ");
+			System.out.print("â—‡   ");
 		else
-			System.out.print("¡ß   ");
-		// 1·ç º£ÀÌ½º
+			System.out.print("â—†   ");
+		// 1ë£¨ ë² ì´ìŠ¤
 		if(this.BASE[0] == 0)
-			System.out.println("   ¡Ş");
+			System.out.println("   â—‡");
 		else
-			System.out.println("   ¡ß");
+			System.out.println("   â—†");
 	}
 	
 	public void newInning() {
-		this.outFlag = false;		// ¾Æ¿ô ÇÃ·¡±×¸¦ ÃÊ±âÈ­
-		this.onBaseFlag = false; 	// Ãâ·ç ÇÃ·¡±×¸¦ ÃÊ±âÈ­
-		this.OC = 0;				// ¾Æ¿ôÄ«¿îÆ®¸¦ ÃÊ±âÈ­
-		this.BC[0] = 0;				// ½ºÆ®¶óÀÌÅ© Ä«¿îÆ® ÃÊ±âÈ­
-		this.BC[1] = 0;				// º¼ Ä«¿îÆ® ÃÊ±âÈ­
-		for(int i=0; i<3; i++)		// º£ÀÌ½º¸¦ ÃÊ±âÈ­
+		this.outFlag = false;		// ì•„ì›ƒ í”Œë˜ê·¸ë¥¼ ì´ˆê¸°í™”
+		this.onBaseFlag = false; 	// ì¶œë£¨ í”Œë˜ê·¸ë¥¼ ì´ˆê¸°í™”
+		this.OC = 0;				// ì•„ì›ƒì¹´ìš´íŠ¸ë¥¼ ì´ˆê¸°í™”
+		this.BC[0] = 0;				// ìŠ¤íŠ¸ë¼ì´í¬ ì¹´ìš´íŠ¸ ì´ˆê¸°í™”
+		this.BC[1] = 0;				// ë³¼ ì¹´ìš´íŠ¸ ì´ˆê¸°í™”
+		for(int i=0; i<3; i++)		// ë² ì´ìŠ¤ë¥¼ ì´ˆê¸°í™”
 			this.BASE[i] = 0;
 	}
 
-	//// º£ÀÌ½º ¼³Á¤ ¸Ş¼­µå
-	// 1. getBase() : ÇöÀç º£ÀÌ½º¿¡ ÁÖÀÚ°¡ ¸î ¸í ÀÖ´ÂÁö ¸®ÅÏ. È¨·± ÀÌº¥Æ®°¡ ¹ß»ıÇßÀ» ¶§ »ç¿ë
+	//// ë² ì´ìŠ¤ ì„¤ì • ë©”ì„œë“œ
+	// 1. getBase() : í˜„ì¬ ë² ì´ìŠ¤ì— ì£¼ìê°€ ëª‡ ëª… ìˆëŠ”ì§€ ë¦¬í„´. í™ˆëŸ° ì´ë²¤íŠ¸ê°€ ë°œìƒí–ˆì„ ë•Œ ì‚¬ìš©
 	public int getBase() {
 		int r = 0;
 		for(int i=0; i<3; i++)
@@ -150,7 +148,7 @@ public class GameApp {
 		return r;
 	}
 	
-	// 2. isFullB() : ÇöÀç º£ÀÌ½º°¡ ²Ë Ã¡´ÂÁö È®ÀÎÇÏ´Â ¸Ş¼­µå
+	// 2. isFullB() : í˜„ì¬ ë² ì´ìŠ¤ê°€ ê½‰ ì°¼ëŠ”ì§€ í™•ì¸í•˜ëŠ” ë©”ì„œë“œ
 	public boolean isFullB() {
 		if(this.BASE[0] == 1 && this.BASE[1] == 1 && this.BASE[2] == 1)
 			return true;
@@ -158,460 +156,460 @@ public class GameApp {
 			return false;
 	}
 	
-	// 3. emptyBase() : º£ÀÌ½º¸¦ ¸ğµÎ ºñ¿ì´Â ¸Ş¼­µå. È¨·± ÀÌº¥Æ® ¹ß»ı, ÀÌ´×ÀÌ Á¾·áµÉ ¶§ »ç¿ë
+	// 3. emptyBase() : ë² ì´ìŠ¤ë¥¼ ëª¨ë‘ ë¹„ìš°ëŠ” ë©”ì„œë“œ. í™ˆëŸ° ì´ë²¤íŠ¸ ë°œìƒ, ì´ë‹ì´ ì¢…ë£Œë  ë•Œ ì‚¬ìš©
 	public void emptyBase() {
 		for(int i=0; i<3; i++)
 			this.BASE[i] = 0;
 	}
 	
-	// 4. setBase() : ¾ÈÅ¸, º¼³İÀÌ ¹ß»ıÇßÀ» ¶§ ÁÖÀÚ¸¦ ¿Å±â°í Á¡¼ö¸¦ Ãß°¡ÇÏ´Â ¸Ş¼­µå
+	// 4. setBase() : ì•ˆíƒ€, ë³¼ë„·ì´ ë°œìƒí–ˆì„ ë•Œ ì£¼ìë¥¼ ì˜®ê¸°ê³  ì ìˆ˜ë¥¼ ì¶”ê°€í•˜ëŠ” ë©”ì„œë“œ
 	public void setBase(int hit) {
-		int plusScore = 0;	// º£ÀÌ½º ÀÌµ¿À¸·Î Ãß°¡µÉ Á¡¼ö
+		int plusScore = 0;	// ë² ì´ìŠ¤ ì´ë™ìœ¼ë¡œ ì¶”ê°€ë  ì ìˆ˜
 		
-		if(hit == 0) {			// 0. º¼³İ
-			if(this.isFullB())	// º£ÀÌ½º°¡ ²Ë Ã¡À» ¶§
-				plusScore++;	// Á¡¼ö¸¦ 1Á¡ Ãß°¡
-			else if(this.BASE[0] == 1) {	// 1·ç¿¡ ÁÖÀÚ°¡ ÀÖ°í
-				if(this.BASE[1] == 1)		// 2·ç¿¡µµ ÁÖÀÚ°¡ ÀÖÀ» ¶§
-					for(int i=0; i<3; i++)	// º£ÀÌ½º¿¡ ÁÖÀÚ¸¦ ¸ğµÎ Ã¤¿öÁÜ
+		if(hit == 0) {			// 0. ë³¼ë„·
+			if(this.isFullB())	// ë² ì´ìŠ¤ê°€ ê½‰ ì°¼ì„ ë•Œ
+				plusScore++;	// ì ìˆ˜ë¥¼ 1ì  ì¶”ê°€
+			else if(this.BASE[0] == 1) {	// 1ë£¨ì— ì£¼ìê°€ ìˆê³ 
+				if(this.BASE[1] == 1)		// 2ë£¨ì—ë„ ì£¼ìê°€ ìˆì„ ë•Œ
+					for(int i=0; i<3; i++)	// ë² ì´ìŠ¤ì— ì£¼ìë¥¼ ëª¨ë‘ ì±„ì›Œì¤Œ
 						this.BASE[i] = 1;
-				else { 						// 1·ç¿¡¸¸ ÁÖÀÚ°¡ ÀÖ°í 2·ç¿¡´Â ÁÖÀÚ°¡ ¾øÀ» ¶§
-					for(int i=0; i<2; i++)	// 2·ç±îÁö¸¸ ÁÖÀÚ¸¦ Ã¤¿öÁÜ
+				else { 						// 1ë£¨ì—ë§Œ ì£¼ìê°€ ìˆê³  2ë£¨ì—ëŠ” ì£¼ìê°€ ì—†ì„ ë•Œ
+					for(int i=0; i<2; i++)	// 2ë£¨ê¹Œì§€ë§Œ ì£¼ìë¥¼ ì±„ì›Œì¤Œ
 						this.BASE[i] = 1;
 				}
 			}
-			else if(this.BASE[0] == 0) {	// 1·ç°¡ ºñ¾úÀ» ¶§
-				this.BASE[0] = 1;			// 1·ç¸¦ Ã¤¿ò
+			else if(this.BASE[0] == 0) {	// 1ë£¨ê°€ ë¹„ì—ˆì„ ë•Œ
+				this.BASE[0] = 1;			// 1ë£¨ë¥¼ ì±„ì›€
 			}
-			System.out.println("\n $ º¼³İÀ¸·Î Ãâ·çÇÕ´Ï´Ù.");
+			System.out.println("\n $ ë³¼ë„·ìœ¼ë¡œ ì¶œë£¨í•©ë‹ˆë‹¤.");
 		}
-		else if(hit == 1) {		  // 1. ÀÏ¹İ ¾ÈÅ¸
-			if(this.BASE[2] == 1) // 3·ç¿¡ ÁÖÀÚ°¡ ÀÖÀ» ¶§
-				plusScore++; 	  // 1Á¡ µæÁ¡
-			this.BASE[2] = this.BASE[1]; //	 2·ç ÁÖÀÚ¸¦ 3·ç·Î
-			this.BASE[1] = this.BASE[0]; //	 1·ç ÁÖÀÚ¸¦ 2·ç·Î
-			this.BASE[0] = 1;			 //  1·ç¿¡ ÁÖÀÚ¸¦ Ã¤¿ò
-			System.out.println("\n $ ¾ÈÅ¸ÀÔ´Ï´Ù!");
+		else if(hit == 1) {		  // 1. ì¼ë°˜ ì•ˆíƒ€
+			if(this.BASE[2] == 1) // 3ë£¨ì— ì£¼ìê°€ ìˆì„ ë•Œ
+				plusScore++; 	  // 1ì  ë“ì 
+			this.BASE[2] = this.BASE[1]; //	 2ë£¨ ì£¼ìë¥¼ 3ë£¨ë¡œ
+			this.BASE[1] = this.BASE[0]; //	 1ë£¨ ì£¼ìë¥¼ 2ë£¨ë¡œ
+			this.BASE[0] = 1;			 //  1ë£¨ì— ì£¼ìë¥¼ ì±„ì›€
+			System.out.println("\n $ ì•ˆíƒ€ì…ë‹ˆë‹¤!");
 		}
-		else if(hit==2) {			// 2. 2·çÅ¸
-			if(this.BASE[2] == 1)	// 3·ç¿¡ ÁÖÀÚ°¡ ÀÖ¾ú´Ù¸é
-				plusScore++;		// +1µæÁ¡
-			if(this.BASE[1] == 1)	// 2·ç¿¡ ÁÖÀÚ°¡ ÀÖ¾ú´Ù¸é 
-				plusScore++;		// +1µæÁ¡
-			this.BASE[2] = this.BASE[0]; // 1·ç ÁÖÀÚ¸¦ 3·ç·Î
-			this.BASE[1] = 1;			 // 2·çÅ¸¸¦ Ä£ Å¸ÀÚ¸¦ 2·ç¿¡ À§Ä¡
-			this.BASE[0] = 0;		 	 // 1·ç¸¦ ºñ¿ì±â
-			System.out.println("\n $ 2·çÅ¸ÀÔ´Ï´Ù!");
+		else if(hit==2) {			// 2. 2ë£¨íƒ€
+			if(this.BASE[2] == 1)	// 3ë£¨ì— ì£¼ìê°€ ìˆì—ˆë‹¤ë©´
+				plusScore++;		// +1ë“ì 
+			if(this.BASE[1] == 1)	// 2ë£¨ì— ì£¼ìê°€ ìˆì—ˆë‹¤ë©´ 
+				plusScore++;		// +1ë“ì 
+			this.BASE[2] = this.BASE[0]; // 1ë£¨ ì£¼ìë¥¼ 3ë£¨ë¡œ
+			this.BASE[1] = 1;			 // 2ë£¨íƒ€ë¥¼ ì¹œ íƒ€ìë¥¼ 2ë£¨ì— ìœ„ì¹˜
+			this.BASE[0] = 0;		 	 // 1ë£¨ë¥¼ ë¹„ìš°ê¸°
+			System.out.println("\n $ 2ë£¨íƒ€ì…ë‹ˆë‹¤!");
 		}
-		else if(hit == 3) {				// 3. 3·çÅ¸ -> ·ç»óÀÇ ¸ğµç ÁÖÀÚ¸¦ ºÒ·¯µéÀÓ
+		else if(hit == 3) {				// 3. 3ë£¨íƒ€ -> ë£¨ìƒì˜ ëª¨ë“  ì£¼ìë¥¼ ë¶ˆëŸ¬ë“¤ì„
 			for(int i=0; i<3; i++) {
-				if(this.BASE[i] == 1) {	// ·ç¿¡ ÁÖÀÚ°¡ Á¸ÀçÇÏ¸é +1 µæÁ¡
+				if(this.BASE[i] == 1) {	// ë£¨ì— ì£¼ìê°€ ì¡´ì¬í•˜ë©´ +1 ë“ì 
 					plusScore++;
-					this.BASE[i] = 0;	// ·ç¸¦ ºñ¿öÁÜ
+					this.BASE[i] = 0;	// ë£¨ë¥¼ ë¹„ì›Œì¤Œ
 				}
 			}
-			this.BASE[2] = 1; 			// Å¸ÀÚ¸¦ 3·ç¿¡ À§Ä¡
-			System.out.println("\n $ 3·çÅ¸ÀÔ´Ï´Ù!");
+			this.BASE[2] = 1; 			// íƒ€ìë¥¼ 3ë£¨ì— ìœ„ì¹˜
+			System.out.println("\n $ 3ë£¨íƒ€ì…ë‹ˆë‹¤!");
 		}
-		else if(hit == 4) {			// 4. È¨·±
-			plusScore += getBase();	// ·ç»ó¿¡ ÀÖ´Â ÁÖÀÚ ¸ğµÎ µæÁ¡
-			plusScore++;			// Å¸ÀÚ±îÁö µæÁ¡
+		else if(hit == 4) {			// 4. í™ˆëŸ°
+			plusScore += getBase();	// ë£¨ìƒì— ìˆëŠ” ì£¼ì ëª¨ë‘ ë“ì 
+			plusScore++;			// íƒ€ìê¹Œì§€ ë“ì 
 			for(int i=0; i<3; i++)
-				this.BASE[i] = 0; 	// ¸ğµç ·ç¸¦ ºñ¿ì±â
-			System.out.println("\n $ È¨·±ÀÔ´Ï´Ù!");
+				this.BASE[i] = 0; 	// ëª¨ë“  ë£¨ë¥¼ ë¹„ìš°ê¸°
+			System.out.println("\n $ í™ˆëŸ°ì…ë‹ˆë‹¤!");
 		}
-		if(plusScore != 0) {						// Á¡¼ö°¡ Áõ°¡ÇßÀ» ¶§
-			if(this.teamFlag == true) {				// (1) »ç¿ëÀÚ°¡ ÇÑÈ­ ÀÌ±Û½º¸¦ ¼±ÅÃÇßÀ» ¶§
-				if(this.myAttack == true)			// (1) - 1. »ç¿ëÀÚÀÇ °ø°İ Â÷·Ê
-					this.score_team1 += plusScore;	// 			ÇÑÈ­ ÀÌ±Û½ºÀÇ Á¡¼ö Áõ°¡
-				else								// (1) - 2. ÄÄÇ»ÅÍÀÇ °ø°İ Â÷·Ê
-					this.score_team2 += plusScore;	// 			¿¤Áö Æ®À©½ºÀÇ Á¡¼ö Áõ°¡
+		if(plusScore != 0) {						// ì ìˆ˜ê°€ ì¦ê°€í–ˆì„ ë•Œ
+			if(this.teamFlag == true) {				// (1) ì‚¬ìš©ìê°€ í•œí™” ì´ê¸€ìŠ¤ë¥¼ ì„ íƒí–ˆì„ ë•Œ
+				if(this.myAttack == true)			// (1) - 1. ì‚¬ìš©ìì˜ ê³µê²© ì°¨ë¡€
+					this.score_team1 += plusScore;	// 			í•œí™” ì´ê¸€ìŠ¤ì˜ ì ìˆ˜ ì¦ê°€
+				else								// (1) - 2. ì»´í“¨í„°ì˜ ê³µê²© ì°¨ë¡€
+					this.score_team2 += plusScore;	// 			ì—˜ì§€ íŠ¸ìœˆìŠ¤ì˜ ì ìˆ˜ ì¦ê°€
 			}
-			else if(this.teamFlag == false) { 		// (2) »ç¿ëÀÚ°¡ ¿¤Áö Æ®À©½º¸¦ ¼±ÅÃÇßÀ» ¶§
-				if(this.myAttack == true)			// (2) - 1. »ç¿ëÀÚÀÇ °ø°İ Â÷·Ê
-					this.score_team2 += plusScore;	//			¿¤Áö Æ®À©½ºÀÇ Á¡¼ö Áõ°¡
-				else 								// (2) - 2. ÄÄÇ»ÅÍÀÇ °ø°İ Â÷·Ê	
-					this.score_team1 += plusScore;	//			ÇÑÈ­ ÀÌ±Û½ºÀÇ Á¡¼ö Áõ°¡
+			else if(this.teamFlag == false) { 		// (2) ì‚¬ìš©ìê°€ ì—˜ì§€ íŠ¸ìœˆìŠ¤ë¥¼ ì„ íƒí–ˆì„ ë•Œ
+				if(this.myAttack == true)			// (2) - 1. ì‚¬ìš©ìì˜ ê³µê²© ì°¨ë¡€
+					this.score_team2 += plusScore;	//			ì—˜ì§€ íŠ¸ìœˆìŠ¤ì˜ ì ìˆ˜ ì¦ê°€
+				else 								// (2) - 2. ì»´í“¨í„°ì˜ ê³µê²© ì°¨ë¡€	
+					this.score_team1 += plusScore;	//			í•œí™” ì´ê¸€ìŠ¤ì˜ ì ìˆ˜ ì¦ê°€
 			}
 			this.scoreFlag = true;
 		}
-		this.onBaseFlag = true;					// ÁÖÀÚ°¡ Ãâ·çÇßÀ¸¹Ç·Î onBaseFlag º¯È­¸¦ ÅëÇØ Å¸¼ø rotate
+		this.onBaseFlag = true;					// ì£¼ìê°€ ì¶œë£¨í–ˆìœ¼ë¯€ë¡œ onBaseFlag ë³€í™”ë¥¼ í†µí•´ íƒ€ìˆœ rotate
 	}
 
-	//// Åõ¼ö¿Í °ü·ÃµÈ ¸Ş¼­µå
-	// 1. incBall() : Åõ¼ö°¡ º¼À» ´øÁ³À» ¶§ ¹ß»ıÇÏ´Â ¸Ş¼­µå
+	//// íˆ¬ìˆ˜ì™€ ê´€ë ¨ëœ ë©”ì„œë“œ
+	// 1. incBall() : íˆ¬ìˆ˜ê°€ ë³¼ì„ ë˜ì¡Œì„ ë•Œ ë°œìƒí•˜ëŠ” ë©”ì„œë“œ
 	public void incBall() {	
-		this.BC[1]++;			// º¼ Ä«¿îÆ® ÇÏ³ª Áõ°¡
-		if(this.BC[1] > 3) {	// º¼ÀÌ 4°³°¡ µÆÀ» ¶§
-			this.BC[1] = 0;		// º¼À» 0À¸·Î ÃÊ±âÈ­
-			this.setBase(0); 	// º¼³İ ÀÌº¥Æ® È£Ãâ
+		this.BC[1]++;			// ë³¼ ì¹´ìš´íŠ¸ í•˜ë‚˜ ì¦ê°€
+		if(this.BC[1] > 3) {	// ë³¼ì´ 4ê°œê°€ ëì„ ë•Œ
+			this.BC[1] = 0;		// ë³¼ì„ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+			this.setBase(0); 	// ë³¼ë„· ì´ë²¤íŠ¸ í˜¸ì¶œ
 		}
 	}
 	
-	// 2. incStrike() : Åõ¼ö°¡ ½ºÆ®¶óÀÌÅ©¸¦ ´øÁ³À» ¶§ ¹ß»ıÇÏ´Â ¸Ş¼­µå
+	// 2. incStrike() : íˆ¬ìˆ˜ê°€ ìŠ¤íŠ¸ë¼ì´í¬ë¥¼ ë˜ì¡Œì„ ë•Œ ë°œìƒí•˜ëŠ” ë©”ì„œë“œ
 	public void incStrike() {	
-		this.BC[0]++; 			// ½ºÆ®¶óÀÌÅ©¸¦ ÇÏ³ª Áõ°¡
-		if(this.BC[0] > 2) {	// ½ºÆ®¶óÀÌÅ©°¡ 3°³ÀÌ¸é
-			System.out.println(" $ »ïÁø ¾Æ¿ôÀÔ´Ï´Ù.");
-			this.BC[0] = 0;		// ½ºÆ®¶óÀÌÅ©¸¦ 0À¸·Î ÃÊ±âÈ­
-			this.BC[1] = 0;		// º¼ Ä«¿îÆ®¸¦ 0À¸·Î ÃÊ±âÈ­
-			this.OC++;			// ¾Æ¿ôÄ«¿îÆ®¸¦ ÇÏ³ª Áõ°¡
-			this.outFlag = true;// outFlag¸¦ true·Î º¯È­½ÃÄÑ¼­ Å¸¼ø rotate È¤Àº ÀÌ´× º¯°æ
-			this.kSign = true;	// kSignÀ» true·Î º¯È­½ÃÄÑ¼­ Åõ¼öÀÇ Å»»ïÁø ±â·Ï¿¡ Ãß°¡
+		this.BC[0]++; 			// ìŠ¤íŠ¸ë¼ì´í¬ë¥¼ í•˜ë‚˜ ì¦ê°€
+		if(this.BC[0] > 2) {	// ìŠ¤íŠ¸ë¼ì´í¬ê°€ 3ê°œì´ë©´
+			System.out.println(" $ ì‚¼ì§„ ì•„ì›ƒì…ë‹ˆë‹¤.");
+			this.BC[0] = 0;		// ìŠ¤íŠ¸ë¼ì´í¬ë¥¼ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+			this.BC[1] = 0;		// ë³¼ ì¹´ìš´íŠ¸ë¥¼ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+			this.OC++;			// ì•„ì›ƒì¹´ìš´íŠ¸ë¥¼ í•˜ë‚˜ ì¦ê°€
+			this.outFlag = true;// outFlagë¥¼ trueë¡œ ë³€í™”ì‹œì¼œì„œ íƒ€ìˆœ rotate í˜¹ì€ ì´ë‹ ë³€ê²½
+			this.kSign = true;	// kSignì„ trueë¡œ ë³€í™”ì‹œì¼œì„œ íˆ¬ìˆ˜ì˜ íƒˆì‚¼ì§„ ê¸°ë¡ì— ì¶”ê°€
 		}
 	}
 	
-	// 3. calcStrike() : »ç¿ëÀÚÀÇ Defense ¸ğµå¿¡¼­ Åõ¼ö°¡ °øÀ» ´øÁö°í, Å¸ÀÚ°¡ ½ºÀ®ÇÏÁö ¾Ê¾ÒÀ» ¶§ ½ºÆ®¶óÀÌÅ©°¡ µÉ È®·üÀ» ¸®ÅÏÇÏ´Â ¸Ş¼­µå 
+	// 3. calcStrike() : ì‚¬ìš©ìì˜ Defense ëª¨ë“œì—ì„œ íˆ¬ìˆ˜ê°€ ê³µì„ ë˜ì§€ê³ , íƒ€ìê°€ ìŠ¤ìœ™í•˜ì§€ ì•Šì•˜ì„ ë•Œ ìŠ¤íŠ¸ë¼ì´í¬ê°€ ë  í™•ë¥ ì„ ë¦¬í„´í•˜ëŠ” ë©”ì„œë“œ 
 	public double calcStrike(int com1, int com2) {
-		double type = 0;	// ±¸Á¾ Å¸ÀÔ
-		double pos = 0;		// ½ºÆ®¶óÀÌÅ© Á¸ À§Ä¡
+		double type = 0;	// êµ¬ì¢… íƒ€ì…
+		double pos = 0;		// ìŠ¤íŠ¸ë¼ì´í¬ ì¡´ ìœ„ì¹˜
 		
-		// commman1 ±¸Á¾ ¿É¼Ç
-		if(com1 == 1)		// 1. Á÷±¸
-			type = 0.9;		// 0.9ÀÇ È®·ü°ª 
-		else if(com1 == 2)	// 2. Ä¿ºê
-			type = 0.85;	// 0.85ÀÇ È®·ü°ª
-		else if(com1 == 3)	// 3. Ã¼ÀÎÁö¾÷
-			type = 0.7;		// 0.7ÀÇ È®·ü°ª
+		// commman1 êµ¬ì¢… ì˜µì…˜
+		if(com1 == 1)		// 1. ì§êµ¬
+			type = 0.9;		// 0.9ì˜ í™•ë¥ ê°’ 
+		else if(com1 == 2)	// 2. ì»¤ë¸Œ
+			type = 0.85;	// 0.85ì˜ í™•ë¥ ê°’
+		else if(com1 == 3)	// 3. ì²´ì¸ì§€ì—…
+			type = 0.7;		// 0.7ì˜ í™•ë¥ ê°’
 		
-		// command2 ½ºÆ®¶óÀÌÅ©Á¸ ¿É¼Ç
-		if(com2 % 2 == 0) // ½ºÆ®¶óÀÌÅ©Á¸ 2, 4, 6, 8 Áß ÇÏ³ªÀÏ ¶§
-			pos = 0.85;	  // 0.85ÀÇ È®·ü°ª
-		else if(com2 % 2 == 1 && com2 != 5) // ½ºÆ®¶óÀÌÅ©Á¸ 1, 3, 7, 9 Áß ÇÏ³ªÀÏ ¶§
-			pos = 0.7;	  					// 0.7ÀÇ È®·ü°ª
-		else if(com2 == 5)	// ½ºÆ®¶óÀÌÅ©Á¸ ÇÑ °¡¿îµ¥ 5¹ø ÀÏ ¶§
-			pos = 0.95; 	// 0.95ÀÇ È®·ü°ª
+		// command2 ìŠ¤íŠ¸ë¼ì´í¬ì¡´ ì˜µì…˜
+		if(com2 % 2 == 0) // ìŠ¤íŠ¸ë¼ì´í¬ì¡´ 2, 4, 6, 8 ì¤‘ í•˜ë‚˜ì¼ ë•Œ
+			pos = 0.85;	  // 0.85ì˜ í™•ë¥ ê°’
+		else if(com2 % 2 == 1 && com2 != 5) // ìŠ¤íŠ¸ë¼ì´í¬ì¡´ 1, 3, 7, 9 ì¤‘ í•˜ë‚˜ì¼ ë•Œ
+			pos = 0.7;	  					// 0.7ì˜ í™•ë¥ ê°’
+		else if(com2 == 5)	// ìŠ¤íŠ¸ë¼ì´í¬ì¡´ í•œ ê°€ìš´ë° 5ë²ˆ ì¼ ë•Œ
+			pos = 0.95; 	// 0.95ì˜ í™•ë¥ ê°’
 		
-		return type*pos; 	// ±¸Á¾°ú ½ºÆ®¶óÀÌÅ©Á¸ ¿É¼ÇÀ» °öÇÑ ÃÖÁ¾ È®·üÀ» ¸®ÅÏ
+		return type*pos; 	// êµ¬ì¢…ê³¼ ìŠ¤íŠ¸ë¼ì´í¬ì¡´ ì˜µì…˜ì„ ê³±í•œ ìµœì¢… í™•ë¥ ì„ ë¦¬í„´
 	}
 	
-	//// °ÔÀÓ ÁøÇà ¸Ş¼­µå
-	// 1. Attack() : »ç¿ëÀÚÀÇ °ø°İ ¸ğµå ¸Ş¼­µå
+	//// ê²Œì„ ì§„í–‰ ë©”ì„œë“œ
+	// 1. Attack() : ì‚¬ìš©ìì˜ ê³µê²© ëª¨ë“œ ë©”ì„œë“œ
 	public void Attack() {
-		this.myAttack = true;	// ÇÃ·¹ÀÌ¾îÀÇ °ø°İ ¼ø¼­
-		Team team;		// Attack() ¸Ş¼­µå¿¡¼­ °ø°İÇÏ´Â ÆÀ
-		Team ComTeam;	// Attack() ¸Ş¼­µå¿¡¼­ ¼öºñÇÏ´Â ÆÀ
-		if(this.teamFlag == true) {	// »ç¿ëÀÚ°¡ ÇÑÈ­ ÀÌ±Û½º¸¦ ¼±ÅÃ
+		this.myAttack = true;	// í”Œë ˆì´ì–´ì˜ ê³µê²© ìˆœì„œ
+		Team team;		// Attack() ë©”ì„œë“œì—ì„œ ê³µê²©í•˜ëŠ” íŒ€
+		Team ComTeam;	// Attack() ë©”ì„œë“œì—ì„œ ìˆ˜ë¹„í•˜ëŠ” íŒ€
+		if(this.teamFlag == true) {	// ì‚¬ìš©ìê°€ í•œí™” ì´ê¸€ìŠ¤ë¥¼ ì„ íƒ
 			team = this.team1;
 			ComTeam = this.team2;
 		}
-		else {						// »ç¿ëÀÚ°¡ ¿¤Áö Æ®À©½º¸¦ ¼±ÅÃ
+		else {						// ì‚¬ìš©ìê°€ ì—˜ì§€ íŠ¸ìœˆìŠ¤ë¥¼ ì„ íƒ
 			team = this.team2;
 			ComTeam = this.team1;
 		}
-		// °ø°İ ½ÃÀÛ ¾È³»¹®±¸ Ãâ·Â
+		// ê³µê²© ì‹œì‘ ì•ˆë‚´ë¬¸êµ¬ ì¶œë ¥
 		if(this.teamFlag == true)
-			System.out.println(Integer.toString(this.gameinning)+"È¸ÃÊ °ø°İÀ» ½ÃÀÛÇÕ´Ï´Ù.\n");
+			System.out.println(Integer.toString(this.gameinning)+"íšŒì´ˆ ê³µê²©ì„ ì‹œì‘í•©ë‹ˆë‹¤.\n");
 		else if(this.teamFlag == false)
-			System.out.println(Integer.toString(this.gameinning)+"È¸¸» °ø°İÀ» ½ÃÀÛÇÕ´Ï´Ù.\n");
+			System.out.println(Integer.toString(this.gameinning)+"íšŒë§ ê³µê²©ì„ ì‹œì‘í•©ë‹ˆë‹¤.\n");
 		
-		// ½ºÄÚ¾î Ãâ·Â
+		// ìŠ¤ì½”ì–´ ì¶œë ¥
 		this.showScore();	
-		// °ø°İÀ» ½ÃÀÛÇÒ ¶§ º£ÀÌ½º¸¦ ÃÊ±âÈ­
+		// ê³µê²©ì„ ì‹œì‘í•  ë•Œ ë² ì´ìŠ¤ë¥¼ ì´ˆê¸°í™”
 		for(int i=0; i<3; i++) {	
 			this.BASE[i] = 0;
 		}
 	
 		
-		// ¾Æ¿ôÄ«¿îÆ® 3°³°¡ ¸ğµÎ Âû ¶§ ±îÁö ÁøÇà
+		// ì•„ì›ƒì¹´ìš´íŠ¸ 3ê°œê°€ ëª¨ë‘ ì°° ë•Œ ê¹Œì§€ ì§„í–‰
 		while(this.OC < 3) {
-			this.outFlag = false;		// ¾Æ¿ô ÇÃ·¡±×¸¦ ÃÊ±âÈ­
-			this.onBaseFlag = false; 	// Ãâ·ç ÇÃ·¡±×¸¦ ÃÊ±âÈ­
+			this.outFlag = false;		// ì•„ì›ƒ í”Œë˜ê·¸ë¥¼ ì´ˆê¸°í™”
+			this.onBaseFlag = false; 	// ì¶œë£¨ í”Œë˜ê·¸ë¥¼ ì´ˆê¸°í™”
 			
-			// Å¸ÀÚ ÀÔÀå
-			ComTeam.showPitcher();		// »ó´ë ÆÀÀÇ Åõ¼ö Á¤º¸ Ãâ·Â
-			team.showHitterRecord();	// Å¸ÀÚ ¼ºÀû Ãâ·Â
+			// íƒ€ì ì…ì¥
+			ComTeam.showPitcher();		// ìƒëŒ€ íŒ€ì˜ íˆ¬ìˆ˜ ì •ë³´ ì¶œë ¥
+			team.showHitterRecord();	// íƒ€ì ì„±ì  ì¶œë ¥
 			
-			BC[0] = 0; // ½ºÆ®¶óÀÌÅ© Ä«¿îÆ®¸¦ 0À¸·Î ÃÊ±âÈ­
-			BC[1] = 0; // º¼ Ä«¿îÆ®¸¦ 0À¸·Î ÃÊ±âÈ­
+			BC[0] = 0; // ìŠ¤íŠ¸ë¼ì´í¬ ì¹´ìš´íŠ¸ë¥¼ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+			BC[1] = 0; // ë³¼ ì¹´ìš´íŠ¸ë¥¼ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 
-			// (1) ¾Æ¿ôÀÌ µÇ°Å³ª(outFlag), (2) ¾ÈÅ¸ ¶Ç´Â º¼³İÀ¸·Î Ãâ·çÇÏ¸é(onBaseFlag) ´ÙÀ½ Å¸ÀÚ·Î º¯°æ
+			// (1) ì•„ì›ƒì´ ë˜ê±°ë‚˜(outFlag), (2) ì•ˆíƒ€ ë˜ëŠ” ë³¼ë„·ìœ¼ë¡œ ì¶œë£¨í•˜ë©´(onBaseFlag) ë‹¤ìŒ íƒ€ìë¡œ ë³€ê²½
 			while(this.outFlag == false && this.onBaseFlag == false) {
-				this.showCountBase();	// º¼Ä«¿îÆ®¿Í ¾Æ¿ôÄ«¿îÆ® Ãâ·Â
+				this.showCountBase();	// ë³¼ì¹´ìš´íŠ¸ì™€ ì•„ì›ƒì¹´ìš´íŠ¸ ì¶œë ¥
 				
-				// Å¸ÀÚ ¿É¼Ç 1) ½ºÀ®		2) ÁöÄÑº¸±â
-				System.out.print(" (1) ½ºÀ® \n (2) ÁöÄÑº¸±â \n >> ");	
-				Scanner scan = new Scanner(System.in);	// »ç¿ëÀÚ ¸í·É ÀÔ·Â¹ŞÀ½
+				// íƒ€ì ì˜µì…˜ 1) ìŠ¤ìœ™		2) ì§€ì¼œë³´ê¸°
+				System.out.print(" (1) ìŠ¤ìœ™ \n (2) ì§€ì¼œë³´ê¸° \n >> ");	
+				Scanner scan = new Scanner(System.in);	// ì‚¬ìš©ì ëª…ë ¹ ì…ë ¥ë°›ìŒ
 				String command = scan.next();
-				if(command.equals("1")) {				// (1) ½ºÀ®À» ¼±ÅÃÇßÀ» ¶§
-					ComTeam.incBalls();		// »ç¿ëÆÀ Åõ¼öÀÇ Åõ±¸¼ö Áõ°¡
-					double rate = Math.random();		// random ÇÔ¼ö¸¦ ÅëÇØ »ı¼ºµÈ ÀÇ»ç³­¼ö¸¦ ÀúÀåÇÏ´Â rate »ı¼º
-					if(rate > 0.97) {   					// rate > 0.97 ÀÏ ¶§ È¨·± ÀÌº¥Æ®
+				if(command.equals("1")) {				// (1) ìŠ¤ìœ™ì„ ì„ íƒí–ˆì„ ë•Œ
+					ComTeam.incBalls();		// ì‚¬ìš©íŒ€ íˆ¬ìˆ˜ì˜ íˆ¬êµ¬ìˆ˜ ì¦ê°€
+					double rate = Math.random();		// random í•¨ìˆ˜ë¥¼ í†µí•´ ìƒì„±ëœ ì˜ì‚¬ë‚œìˆ˜ë¥¼ ì €ì¥í•˜ëŠ” rate ìƒì„±
+					if(rate > 0.97) {   					// rate > 0.97 ì¼ ë•Œ í™ˆëŸ° ì´ë²¤íŠ¸
 						this.setBase(4);
-						team.hit(4);	// team.hit() ¸Ş¼­µå¸¦ ÅëÇØ Å¸ÀÚÀÇ ±â·Ï¿¡ Ãß°¡
+						team.hit(4);	// team.hit() ë©”ì„œë“œë¥¼ í†µí•´ íƒ€ìì˜ ê¸°ë¡ì— ì¶”ê°€
 					}
-					else if(rate <= 0.97 && rate > 0.93) {	// 0.93 ~ rate ~ 0.97 ÀÏ ¶§ 3·çÅ¸ ÀÌº¥Æ®
+					else if(rate <= 0.97 && rate > 0.93) {	// 0.93 ~ rate ~ 0.97 ì¼ ë•Œ 3ë£¨íƒ€ ì´ë²¤íŠ¸
 						this.setBase(3);
-						team.hit(3);	// team.hit() ¸Ş¼­µå¸¦ ÅëÇØ Å¸ÀÚÀÇ ±â·Ï¿¡ Ãß°¡
+						team.hit(3);	// team.hit() ë©”ì„œë“œë¥¼ í†µí•´ íƒ€ìì˜ ê¸°ë¡ì— ì¶”ê°€
 					}
-					else if(rate <= 0.93 && rate > 0.85) {	// 0.85 ~ rate ~ 0.93 ÀÏ ¶§ 2·çÅ¸ ÀÌº¥Æ®
+					else if(rate <= 0.93 && rate > 0.85) {	// 0.85 ~ rate ~ 0.93 ì¼ ë•Œ 2ë£¨íƒ€ ì´ë²¤íŠ¸
 						this.setBase(2);
-						team.hit(2);	// team.hit() ¸Ş¼­µå¸¦ ÅëÇØ Å¸ÀÚÀÇ ±â·Ï¿¡ Ãß°¡
+						team.hit(2);	// team.hit() ë©”ì„œë“œë¥¼ í†µí•´ íƒ€ìì˜ ê¸°ë¡ì— ì¶”ê°€
 					}
-					else if(rate <= 0.85 && rate > 0.70) {	// 0.70 ~ rate ~ 0.85 ÀÏ ¶§ ¾ÈÅ¸ ÀÌº¥Æ®
+					else if(rate <= 0.85 && rate > 0.70) {	// 0.70 ~ rate ~ 0.85 ì¼ ë•Œ ì•ˆíƒ€ ì´ë²¤íŠ¸
 						this.setBase(1);
-						team.hit(1);	// team.hit() ¸Ş¼­µå¸¦ ÅëÇØ Å¸ÀÚÀÇ ±â·Ï¿¡ Ãß°¡
+						team.hit(1);	// team.hit() ë©”ì„œë“œë¥¼ í†µí•´ íƒ€ìì˜ ê¸°ë¡ì— ì¶”ê°€
 					}
-					else if(rate <= 0.70 && rate > 0.55) {	// 0.55 ~ rate ~ 0.70 ÀÏ ¶§ ¶¥º¼ ÀÌº¥Æ®
-						System.out.println("\n $ ¶¥º¼ ¾Æ¿ôÀÔ´Ï´Ù.");
-						this.OC++;				// ¾Æ¿ô Ä«¿îÆ® Ãß°¡
-						this.outFlag = true;	// ¾Æ¿ô ÇÃ·¡±× º¯°æ
-						team.out();				// team.out() ÇÃ·¡±×¸¦ ÅëÇØ Å¸ÀÚÀÇ ±â·Ï¿¡ Ãß°¡
+					else if(rate <= 0.70 && rate > 0.55) {	// 0.55 ~ rate ~ 0.70 ì¼ ë•Œ ë•…ë³¼ ì´ë²¤íŠ¸
+						System.out.println("\n $ ë•…ë³¼ ì•„ì›ƒì…ë‹ˆë‹¤.");
+						this.OC++;				// ì•„ì›ƒ ì¹´ìš´íŠ¸ ì¶”ê°€
+						this.outFlag = true;	// ì•„ì›ƒ í”Œë˜ê·¸ ë³€ê²½
+						team.out();				// team.out() í”Œë˜ê·¸ë¥¼ í†µí•´ íƒ€ìì˜ ê¸°ë¡ì— ì¶”ê°€
 					}
-					else if(rate <= 0.55 && rate > 0.40) {	// 0.40 ~ rate ~ 0.55 ÀÏ ¶§ ¶¥º¼ ÀÌº¥Æ®
-						System.out.println("\n $ ¶áº¼ ¾Æ¿ôÀÔ´Ï´Ù.");
-						this.OC++;				// ¾Æ¿ô Ä«¿îÆ® Ãß°¡
-						this.outFlag = true;	// ¾Æ¿ô ÇÃ·¡±× º¯°æ
-						team.out();				// team.out() ÇÃ·¡±×¸¦ ÅëÇØ Å¸ÀÚÀÇ ±â·Ï¿¡ Ãß°¡
+					else if(rate <= 0.55 && rate > 0.40) {	// 0.40 ~ rate ~ 0.55 ì¼ ë•Œ ë•…ë³¼ ì´ë²¤íŠ¸
+						System.out.println("\n $ ëœ¬ë³¼ ì•„ì›ƒì…ë‹ˆë‹¤.");
+						this.OC++;				// ì•„ì›ƒ ì¹´ìš´íŠ¸ ì¶”ê°€
+						this.outFlag = true;	// ì•„ì›ƒ í”Œë˜ê·¸ ë³€ê²½
+						team.out();				// team.out() í”Œë˜ê·¸ë¥¼ í†µí•´ íƒ€ìì˜ ê¸°ë¡ì— ì¶”ê°€
 					}
-					else {						// rate < 0.40 ÀÏ ¶§ Çê½ºÀ®
-						System.out.println("\n $ Çê½ºÀ®ÀÔ´Ï´Ù.");
-						this.incStrike(); 		// ½ºÆ®¶óÀÌÅ© Áõ°¡
+					else {						// rate < 0.40 ì¼ ë•Œ í—›ìŠ¤ìœ™
+						System.out.println("\n $ í—›ìŠ¤ìœ™ì…ë‹ˆë‹¤.");
+						this.incStrike(); 		// ìŠ¤íŠ¸ë¼ì´í¬ ì¦ê°€
 					}
 								
 				}
-				else if(command.equals("2")) {	// (2) ½ºÀ®ÇÏÁö ¾Ê°í ±â´Ù¸®´Â °É ¼±ÅÃÇßÀ» ¶§
-					ComTeam.incBalls();		// »ç¿ëÆÀ Åõ¼öÀÇ Åõ±¸¼ö Áõ°¡
-					double rate = Math.random();	// random ÇÔ¼ö¸¦ ÅëÇØ »ı¼ºµÈ ÀÇ»ç³­¼ö¸¦ ÀúÀåÇÏ´Â rate »ı¼º
-					if(rate > 0.60) {				// rate > 0.60 ÀÏ ¶§ ½ºÆ®¶óÀÌÅ©
-						System.out.println("\n $ ½ºÆ®¶óÀÌÅ©ÀÔ´Ï´Ù.");
-						this.incStrike();			// ½ºÆ®¶óÀÌÅ© Áõ°¡
+				else if(command.equals("2")) {	// (2) ìŠ¤ìœ™í•˜ì§€ ì•Šê³  ê¸°ë‹¤ë¦¬ëŠ” ê±¸ ì„ íƒí–ˆì„ ë•Œ
+					ComTeam.incBalls();		// ì‚¬ìš©íŒ€ íˆ¬ìˆ˜ì˜ íˆ¬êµ¬ìˆ˜ ì¦ê°€
+					double rate = Math.random();	// random í•¨ìˆ˜ë¥¼ í†µí•´ ìƒì„±ëœ ì˜ì‚¬ë‚œìˆ˜ë¥¼ ì €ì¥í•˜ëŠ” rate ìƒì„±
+					if(rate > 0.60) {				// rate > 0.60 ì¼ ë•Œ ìŠ¤íŠ¸ë¼ì´í¬
+						System.out.println("\n $ ìŠ¤íŠ¸ë¼ì´í¬ì…ë‹ˆë‹¤.");
+						this.incStrike();			// ìŠ¤íŠ¸ë¼ì´í¬ ì¦ê°€
 					}
-					else {  						// rate < 0.60 ÀÏ ¶§ º¼
-						System.out.println("\n $ º¼ÀÔ´Ï´Ù.");
-						this.incBall();				// º¼ Áõ°¡
+					else {  						// rate < 0.60 ì¼ ë•Œ ë³¼
+						System.out.println("\n $ ë³¼ì…ë‹ˆë‹¤.");
+						this.incBall();				// ë³¼ ì¦ê°€
 					}
 						
 				}
-				else {	// 1ÀÌ³ª 2°¡ ¾Æ´Ñ ´Ù¸¥ ÀÔ·ÂÀ» ÇßÀ» ¶§
-					System.out.println(" $ ÀÔ·ÂÀÌ ¿Ã¹Ù¸£Áö ¾Ê½À´Ï´Ù. 1 È¤Àº 2¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+				else {	// 1ì´ë‚˜ 2ê°€ ì•„ë‹Œ ë‹¤ë¥¸ ì…ë ¥ì„ í–ˆì„ ë•Œ
+					System.out.println(" $ ì…ë ¥ì´ ì˜¬ë°”ë¥´ì§€ ì•ŠìŠµë‹ˆë‹¤. 1 í˜¹ì€ 2ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 					continue;
 				}
 				System.out.println();
 				
 			}
-			if(this.scoreFlag == true) {	// Å¸ÀÚ°¡ º¯°æµÉ ¶§ Á¡¼öÀÇ º¯È­°¡ ÀÖ´Ù¸é Á¡¼ö Ãâ·Â
+			if(this.scoreFlag == true) {	// íƒ€ìê°€ ë³€ê²½ë  ë•Œ ì ìˆ˜ì˜ ë³€í™”ê°€ ìˆë‹¤ë©´ ì ìˆ˜ ì¶œë ¥
 				this.showScore();
 				this.scoreFlag = false;
 			}
-			if(this.kSign == true) {	// »ïÁø ÀÌº¥Æ®·Î ÀÎÇØ¼­ ¾Æ¿ôÀÌ ¹ß»ıÇß´Ù¸é
-				team.out();				// »ïÁø´çÇÑ Å¸ÀÚ ¾Æ¿ôÃ³¸®
-				ComTeam.increaseK(); 	// ÄÄÇ»ÅÍ ÆÀÀÇ Åõ¼öÀÇ Å»»ïÁø Áõ°¡
-				this.kSign = false;		// kSignÀ» ´Ù½Ã false»óÅÂ·Î µ¹·Á³õÀ½
+			if(this.kSign == true) {	// ì‚¼ì§„ ì´ë²¤íŠ¸ë¡œ ì¸í•´ì„œ ì•„ì›ƒì´ ë°œìƒí–ˆë‹¤ë©´
+				team.out();				// ì‚¼ì§„ë‹¹í•œ íƒ€ì ì•„ì›ƒì²˜ë¦¬
+				ComTeam.increaseK(); 	// ì»´í“¨í„° íŒ€ì˜ íˆ¬ìˆ˜ì˜ íƒˆì‚¼ì§„ ì¦ê°€
+				this.kSign = false;		// kSignì„ ë‹¤ì‹œ falseìƒíƒœë¡œ ëŒë ¤ë†“ìŒ
 			}
-			// »ç¿ëÀÚ°¡ È¨ÆÀÀÌ°í ¸¶Áö¸· ÀÌ´×¿¡¼­ ¿øÁ¤ÆÀÀ» ¿ªÀüÇßÀ» ¶§
+			// ì‚¬ìš©ìê°€ í™ˆíŒ€ì´ê³  ë§ˆì§€ë§‰ ì´ë‹ì—ì„œ ì›ì •íŒ€ì„ ì—­ì „í–ˆì„ ë•Œ
 			if(this.teamFlag == false && (this.gameinning == this.inning) && (this.score_team1 < this.score_team2))
 				break;
-			team.incHitterturn(); 		// ´ÙÀ½ Å¸¼øÀ¸·Î º¯°æ
+			team.incHitterturn(); 		// ë‹¤ìŒ íƒ€ìˆœìœ¼ë¡œ ë³€ê²½
 		}
-		// ¾Æ¿ôÄ«¿îÆ®°¡ 3ÀÌ µÇ¾úÀ» ¶§
+		// ì•„ì›ƒì¹´ìš´íŠ¸ê°€ 3ì´ ë˜ì—ˆì„ ë•Œ
 		if(this.teamFlag == true)
-			System.out.println(Integer.toString(this.gameinning)+"È¸ÃÊ °ø°İÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.\n");
+			System.out.println(Integer.toString(this.gameinning)+"íšŒì´ˆ ê³µê²©ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.\n");
 		else if(this.teamFlag == false)
-			System.out.println(Integer.toString(this.gameinning)+"È¸¸» °ø°İÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.\n");
-		this.newInning(); 			// »õ·Î¿î ÀÌ´×À¸·Î ÃÊ±âÈ­
+			System.out.println(Integer.toString(this.gameinning)+"íšŒë§ ê³µê²©ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.\n");
+		this.newInning(); 			// ìƒˆë¡œìš´ ì´ë‹ìœ¼ë¡œ ì´ˆê¸°í™”
 		this.myAttack = false;
 	}
 
 	public void Defense() {
-		this.myAttack = false; 		// ÄÄÇ»ÅÍÀÇ °ø°İ ¼ø¼­·Î ¼¼ÆÃ
-		if(this.teamFlag == true)	// »ç¿ëÀÚÀÇ ÆÀ ¼±ÅÃ¿¡ µû¶ó ¼öºñ ½ÃÀÛ ¸Ş½ÃÁö Ãâ·Â
-			System.out.println(Integer.toString(this.gameinning)+"È¸¸» ¼öºñ¸¦ ½ÃÀÛÇÕ´Ï´Ù.\n");
+		this.myAttack = false; 		// ì»´í“¨í„°ì˜ ê³µê²© ìˆœì„œë¡œ ì„¸íŒ…
+		if(this.teamFlag == true)	// ì‚¬ìš©ìì˜ íŒ€ ì„ íƒì— ë”°ë¼ ìˆ˜ë¹„ ì‹œì‘ ë©”ì‹œì§€ ì¶œë ¥
+			System.out.println(Integer.toString(this.gameinning)+"íšŒë§ ìˆ˜ë¹„ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.\n");
 		else if(this.teamFlag == false)
-			System.out.println(Integer.toString(this.gameinning)+"È¸ÃÊ ¼öºñ¸¦ ½ÃÀÛÇÕ´Ï´Ù.\n");
+			System.out.println(Integer.toString(this.gameinning)+"íšŒì´ˆ ìˆ˜ë¹„ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.\n");
 		
-		Team UserTeam;		// »ç¿ëÀÚÀÇ ÆÀ
-		Team ComTeam;		// ÄÄÇ»ÅÍÀÇ ÆÀ
+		Team UserTeam;		// ì‚¬ìš©ìì˜ íŒ€
+		Team ComTeam;		// ì»´í“¨í„°ì˜ íŒ€
 		
-		if(this.teamFlag == true) {	// ÇÑÈ­ ÀÌ±Û½º ¼±ÅÃ
+		if(this.teamFlag == true) {	// í•œí™” ì´ê¸€ìŠ¤ ì„ íƒ
 			UserTeam = this.team1;
 			ComTeam = this.team2;
 		}
-		else {						// ¿¤Áö Æ®À©½º ¼±ÅÃ
+		else {						// ì—˜ì§€ íŠ¸ìœˆìŠ¤ ì„ íƒ
 			UserTeam = this.team2;
 			ComTeam = this.team1;
 		}
 		
 		this.showScore();
 		
-		while(this.OC < 3) {			// ¾Æ¿ôÄ«¿îÆ®°¡ 3°³°¡ µÉ ¶§ ±îÁö ÁøÇà
-			// ÄÄÇ»ÅÍ ÆÀÀÇ Á¡¼ö º¯È­¸¦ Ã¼Å©ÇÏ±â À§ÇÑ originScore »ı¼º
+		while(this.OC < 3) {			// ì•„ì›ƒì¹´ìš´íŠ¸ê°€ 3ê°œê°€ ë  ë•Œ ê¹Œì§€ ì§„í–‰
+			// ì»´í“¨í„° íŒ€ì˜ ì ìˆ˜ ë³€í™”ë¥¼ ì²´í¬í•˜ê¸° ìœ„í•œ originScore ìƒì„±
 
 			
-			UserTeam.showPitcher();		// »ç¿ëÀÚ ÆÀÀÇ Åõ¼ö Á¤º¸ Ãâ·Â
-			this.outFlag = false;		// ¾Æ¿ô ÇÃ·¡±×¸¦ ÃÊ±âÈ­
-			this.onBaseFlag = false; 	// Ãâ·ç ÇÃ·¡±×¸¦ ÃÊ±âÈ­
+			UserTeam.showPitcher();		// ì‚¬ìš©ì íŒ€ì˜ íˆ¬ìˆ˜ ì •ë³´ ì¶œë ¥
+			this.outFlag = false;		// ì•„ì›ƒ í”Œë˜ê·¸ë¥¼ ì´ˆê¸°í™”
+			this.onBaseFlag = false; 	// ì¶œë£¨ í”Œë˜ê·¸ë¥¼ ì´ˆê¸°í™”
 			
-			// Å¸ÀÚ ÀÔÀå
-			ComTeam.showHitterRecord();	// »ó´ëÆÀ Å¸ÀÚ ¼ºÀû Ãâ·Â
-			BC[0] = 0; // ½ºÆ®¶óÀÌÅ© Ä«¿îÆ®¸¦ 0À¸·Î ÃÊ±âÈ­
-			BC[1] = 0; // º¼ Ä«¿îÆ®¸¦ 0À¸·Î ÃÊ±âÈ­
+			// íƒ€ì ì…ì¥
+			ComTeam.showHitterRecord();	// ìƒëŒ€íŒ€ íƒ€ì ì„±ì  ì¶œë ¥
+			BC[0] = 0; // ìŠ¤íŠ¸ë¼ì´í¬ ì¹´ìš´íŠ¸ë¥¼ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+			BC[1] = 0; // ë³¼ ì¹´ìš´íŠ¸ë¥¼ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 			
-			// (1) ¾Æ¿ôÀÌ µÇ°Å³ª, (2) ¾ÈÅ¸ ¶Ç´Â º¼³İÀ¸·Î Ãâ·çÇÏ¸é ´ÙÀ½ Å¸ÀÚ·Î º¯°æ
+			// (1) ì•„ì›ƒì´ ë˜ê±°ë‚˜, (2) ì•ˆíƒ€ ë˜ëŠ” ë³¼ë„·ìœ¼ë¡œ ì¶œë£¨í•˜ë©´ ë‹¤ìŒ íƒ€ìë¡œ ë³€ê²½
 			while(this.outFlag == false && this.onBaseFlag == false) {
-				this.showCountBase();					// º¼Ä«¿îÆ®¿Í ¾Æ¿ôÄ«¿îÆ® Ãâ·Â
-				// ½ºÆ®¶óÀÌÅ©Á¸ ÀÌ¹ÌÁö »ı¼º
-				System.out.println(" ¨ç | ¨è | ¨é ");
+				this.showCountBase();					// ë³¼ì¹´ìš´íŠ¸ì™€ ì•„ì›ƒì¹´ìš´íŠ¸ ì¶œë ¥
+				// ìŠ¤íŠ¸ë¼ì´í¬ì¡´ ì´ë¯¸ì§€ ìƒì„±
+				System.out.println(" â‘  | â‘¡ | â‘¢ ");
 				System.out.println(" ----------");
-				System.out.println(" ¨ê | ¨ë | ¨ì ");
+				System.out.println(" â‘£ | â‘¤ | â‘¥ ");
 				System.out.println(" ----------");
-				System.out.println(" ¨í | ¨î | ¨ï ");
-				// ±¸Á¾ ¼±ÅÃ
-				System.out.println(" $ ±¸Á¾À» ¼±ÅÃÇØÁÖ¼¼¿ä");	
-				System.out.print(" (1) Á÷±¸ \n (2) Ä¿ºê \n (3) Ã¼ÀÎÁö¾÷ \n >> ");	
+				System.out.println(" â‘¦ | â‘§ | â‘¨ ");
+				// êµ¬ì¢… ì„ íƒ
+				System.out.println(" $ êµ¬ì¢…ì„ ì„ íƒí•´ì£¼ì„¸ìš”");	
+				System.out.print(" (1) ì§êµ¬ \n (2) ì»¤ë¸Œ \n (3) ì²´ì¸ì§€ì—… \n >> ");	
 				Scanner scan = new Scanner(System.in);
 				String command1 = scan.next();
-				// ½ºÆ®¶óÀÌÅ©Á¸ ¼±ÅÃ
-				System.out.println("\n $ °øÀ» ´øÁú ¿µ¿ªÀ» ¼±ÅÃÇØÁÖ¼¼¿ä");
-				System.out.print(" ¨ç ~ ¨ï ¹ø ¿µ¿ª Áß ¼±ÅÃ \n >> ");
+				// ìŠ¤íŠ¸ë¼ì´í¬ì¡´ ì„ íƒ
+				System.out.println("\n $ ê³µì„ ë˜ì§ˆ ì˜ì—­ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
+				System.out.print(" â‘  ~ â‘¨ ë²ˆ ì˜ì—­ ì¤‘ ì„ íƒ \n >> ");
 				Scanner scan2 = new Scanner(System.in);
 				String command2 = scan.next();
 				
-				UserTeam.incBalls();	// »ç¿ëÀÚ ÆÀ Åõ¼öÀÇ Åõ±¸¼ö Áõ°¡
-				double swing = Math.random(); // Å¸ÀÚ°¡ ½ºÀ®ÇÒ È®·üÀ» ÀúÀåÇÒ  swing º¯¼ö »ı¼º
+				UserTeam.incBalls();	// ì‚¬ìš©ì íŒ€ íˆ¬ìˆ˜ì˜ íˆ¬êµ¬ìˆ˜ ì¦ê°€
+				double swing = Math.random(); // íƒ€ìê°€ ìŠ¤ìœ™í•  í™•ë¥ ì„ ì €ì¥í•   swing ë³€ìˆ˜ ìƒì„±
 				
-				// »ç¿ëÀÚ°¡ ¼±ÅÃÇÑ ±¸Á¾°ú ½ºÆ®¶óÀÌÅ© Á¸À» ÀÎÀÚ·Î strike È®·ü °è»ê
+				// ì‚¬ìš©ìê°€ ì„ íƒí•œ êµ¬ì¢…ê³¼ ìŠ¤íŠ¸ë¼ì´í¬ ì¡´ì„ ì¸ìë¡œ strike í™•ë¥  ê³„ì‚°
 				double strike = this.calcStrike(Integer.parseInt(command1), Integer.parseInt(command2));
 				
-				if(swing >= 0.5) {					// swing > 0.5 ÀÏ ¶§ »ó´ëÆÀ Å¸ÀÚ°¡ ½ºÀ®
-					// Attack() ¸Ş¼­µå¿Í µ¿ÀÏ
+				if(swing >= 0.5) {					// swing > 0.5 ì¼ ë•Œ ìƒëŒ€íŒ€ íƒ€ìê°€ ìŠ¤ìœ™
+					// Attack() ë©”ì„œë“œì™€ ë™ì¼
 					double rate = Math.random();
-					if(rate > 0.97) { 						// È¨·± ÀÌº¥Æ®
+					if(rate > 0.97) { 						// í™ˆëŸ° ì´ë²¤íŠ¸
 						this.setBase(4);
 						ComTeam.hit(4);
 					}
-					else if(rate <= 0.97 && rate > 0.93) {	// 3·çÅ¸ ÀÌº¥Æ®
+					else if(rate <= 0.97 && rate > 0.93) {	// 3ë£¨íƒ€ ì´ë²¤íŠ¸
 						this.setBase(3);
 						ComTeam.hit(3);
 					}
-					else if(rate <= 0.93 && rate > 0.85) {	// 2·çÅ¸ ÀÌº¥Æ®
+					else if(rate <= 0.93 && rate > 0.85) {	// 2ë£¨íƒ€ ì´ë²¤íŠ¸
 						this.setBase(2);
 						ComTeam.hit(2);
 					}
-					else if(rate <= 0.85 && rate > 0.70) {	// ¾ÈÅ¸ ÀÌº¥Æ®
+					else if(rate <= 0.85 && rate > 0.70) {	// ì•ˆíƒ€ ì´ë²¤íŠ¸
 						this.setBase(1);
 						ComTeam.hit(1);
 					}
-					else if(rate <= 0.70 && rate > 0.55) {	// ¶¥º¼ ÀÌº¥Æ®
-						System.out.println("\n $ ¶¥º¼ ¾Æ¿ôÀÔ´Ï´Ù.");
+					else if(rate <= 0.70 && rate > 0.55) {	// ë•…ë³¼ ì´ë²¤íŠ¸
+						System.out.println("\n $ ë•…ë³¼ ì•„ì›ƒì…ë‹ˆë‹¤.");
 						this.OC++;
 						this.outFlag = true;
 					}
-					else if(rate <= 0.55 && rate > 0.40) {	// ¶áº¼ ÀÌº¥Æ®
-						System.out.println("\n $ ¶áº¼ ¾Æ¿ôÀÔ´Ï´Ù.");
+					else if(rate <= 0.55 && rate > 0.40) {	// ëœ¬ë³¼ ì´ë²¤íŠ¸
+						System.out.println("\n $ ëœ¬ë³¼ ì•„ì›ƒì…ë‹ˆë‹¤.");
 						this.OC++;
 						this.outFlag = true;
 					}
 					else {
-						System.out.println("\n $ Çê½ºÀ®ÀÔ´Ï´Ù.");	// Çê½ºÀ® ÀÌº¥Æ®
-						this.incStrike(); 	// Çê½ºÀ®
+						System.out.println("\n $ í—›ìŠ¤ìœ™ì…ë‹ˆë‹¤.");	// í—›ìŠ¤ìœ™ ì´ë²¤íŠ¸
+						this.incStrike(); 	// í—›ìŠ¤ìœ™
 					}	
 				}
-				else {								// swing < 0.5 ÀÏ ¶§ »ó´ëÆÀ Å¸ÀÚ°¡ ½ºÀ®ÇÏÁö ¾ÊÀ½
-					if(strike > 0.5) {				// strike°ªÀÌ 0.5¸¦ ³ÑÀ¸¸é ½ºÆ®¶óÀÌÅ©
-						System.out.println("\n $ ½ºÆ®¶óÀÌÅ©ÀÔ´Ï´Ù.");
+				else {								// swing < 0.5 ì¼ ë•Œ ìƒëŒ€íŒ€ íƒ€ìê°€ ìŠ¤ìœ™í•˜ì§€ ì•ŠìŒ
+					if(strike > 0.5) {				// strikeê°’ì´ 0.5ë¥¼ ë„˜ìœ¼ë©´ ìŠ¤íŠ¸ë¼ì´í¬
+						System.out.println("\n $ ìŠ¤íŠ¸ë¼ì´í¬ì…ë‹ˆë‹¤.");
 						this.incStrike();
 					}
-					else {							// strike°ªÀÌ 0.5¸¦ ³ÑÁö ¾ÊÀ¸¸é º¼
-						System.out.println("\n $ º¼ÀÔ´Ï´Ù.");
+					else {							// strikeê°’ì´ 0.5ë¥¼ ë„˜ì§€ ì•Šìœ¼ë©´ ë³¼
+						System.out.println("\n $ ë³¼ì…ë‹ˆë‹¤.");
 						this.incBall();
 					}	
 				}
 				System.out.println();			
 			}
 			
-			if(this.scoreFlag == true) {	// Å¸ÀÚ°¡ º¯°æµÉ ¶§ Á¡¼öÀÇ º¯È­°¡ ÀÖ´Ù¸é Á¡¼ö Ãâ·Â
+			if(this.scoreFlag == true) {	// íƒ€ìê°€ ë³€ê²½ë  ë•Œ ì ìˆ˜ì˜ ë³€í™”ê°€ ìˆë‹¤ë©´ ì ìˆ˜ ì¶œë ¥
 				this.showScore();
 				this.scoreFlag = false;
 			}
 			
-			if(this.kSign == true) {		// »ó´ëÆÀ Å¸ÀÚ°¡ »ïÁøÀ¸·Î ¾Æ¿ô´çÇß´Ù¸é
-				ComTeam.out();				// »ïÁø´çÇÑ Å¸ÀÚ ¾Æ¿ôÃ³¸®
-				UserTeam.increaseK();		// Åõ¼öÀÇ ±â·Ï¿¡ Å»»ïÁø 1°³ Ãß°¡
-				this.kSign = false;			// kSignÀ» ´Ù½Ã false»óÅÂ·Î µ¹·Á³õÀ½
+			if(this.kSign == true) {		// ìƒëŒ€íŒ€ íƒ€ìê°€ ì‚¼ì§„ìœ¼ë¡œ ì•„ì›ƒë‹¹í–ˆë‹¤ë©´
+				ComTeam.out();				// ì‚¼ì§„ë‹¹í•œ íƒ€ì ì•„ì›ƒì²˜ë¦¬
+				UserTeam.increaseK();		// íˆ¬ìˆ˜ì˜ ê¸°ë¡ì— íƒˆì‚¼ì§„ 1ê°œ ì¶”ê°€
+				this.kSign = false;			// kSignì„ ë‹¤ì‹œ falseìƒíƒœë¡œ ëŒë ¤ë†“ìŒ
 			}
 			
-			// »ç¿ëÀÚ°¡ ¿øÁ¤ÆÀÀÌ°í ¸¶Áö¸· ÀÌ´×¿¡¼­ ¿øÁ¤ÆÀ¿¡°Ô ¿ªÀüÀ» ´çÇßÀ» ¶§
+			// ì‚¬ìš©ìê°€ ì›ì •íŒ€ì´ê³  ë§ˆì§€ë§‰ ì´ë‹ì—ì„œ ì›ì •íŒ€ì—ê²Œ ì—­ì „ì„ ë‹¹í–ˆì„ ë•Œ
 			if(this.teamFlag == true && (this.gameinning == this.inning) && (this.score_team1 < this.score_team2))
 				break;
-			ComTeam.incHitterturn(); 		// ´ÙÀ½ Å¸¼øÀ¸·Î º¯°æ
+			ComTeam.incHitterturn(); 		// ë‹¤ìŒ íƒ€ìˆœìœ¼ë¡œ ë³€ê²½
 		}
 		
-		// ¼öºñ ¸ğµå Á¾·á
-		if(this.teamFlag == true)		// ÇÑÈ­ÀÌ±Û½º(¿øÁ¤ÆÀ) ¼öºñ Á¾·á ¸Ş½ÃÁö
-			System.out.println(Integer.toString(this.gameinning)+"È¸¸» ¼öºñ°¡ Á¾·áµÇ¾ú½À´Ï´Ù.");
-		else if(this.teamFlag == false)	// ¿¤ÁöÆ®À©½º(È¨ÆÀ) ¼öºñ Á¾·á ¸Ş½ÃÁö
-			System.out.println(Integer.toString(this.gameinning)+"È¸ÃÊ ¼öºñ°¡ Á¾·áµÇ¾ú½À´Ï´Ù.");
-		this.newInning(); 			// »õ·Î¿î ÀÌ´×À¸·Î ÃÊ±âÈ­
+		// ìˆ˜ë¹„ ëª¨ë“œ ì¢…ë£Œ
+		if(this.teamFlag == true)		// í•œí™”ì´ê¸€ìŠ¤(ì›ì •íŒ€) ìˆ˜ë¹„ ì¢…ë£Œ ë©”ì‹œì§€
+			System.out.println(Integer.toString(this.gameinning)+"íšŒë§ ìˆ˜ë¹„ê°€ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+		else if(this.teamFlag == false)	// ì—˜ì§€íŠ¸ìœˆìŠ¤(í™ˆíŒ€) ìˆ˜ë¹„ ì¢…ë£Œ ë©”ì‹œì§€
+			System.out.println(Integer.toString(this.gameinning)+"íšŒì´ˆ ìˆ˜ë¹„ê°€ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+		this.newInning(); 			// ìƒˆë¡œìš´ ì´ë‹ìœ¼ë¡œ ì´ˆê¸°í™”
 		this.myAttack = true;
 	}
 	
-	// 3. °ÔÀÓ °á°ú¸¦ ¾Ë·ÁÁÖ´Â ¸Ş¼­µå
+	// 3. ê²Œì„ ê²°ê³¼ë¥¼ ì•Œë ¤ì£¼ëŠ” ë©”ì„œë“œ
 	public void showResult() {
-		if(this.score_team1 == this.score_team2) // ¹«½ÂºÎ
-			System.out.println("  <<-- ¹«½ÂºÎÀÔ´Ï´Ù -->>");
+		if(this.score_team1 == this.score_team2) // ë¬´ìŠ¹ë¶€
+			System.out.println("  <<-- ë¬´ìŠ¹ë¶€ì…ë‹ˆë‹¤ -->>");
 		else if(this.score_team1 > this.score_team2)
 			if(this.teamFlag == true)
-				System.out.println("  <<== ½Â¸®Çß½À´Ï´Ù ==>>");
+				System.out.println("  <<== ìŠ¹ë¦¬í–ˆìŠµë‹ˆë‹¤ ==>>");
 			else
-				System.out.println("  <<-- ÆĞ¹èÇß½À´Ï´Ù -->>");
+				System.out.println("  <<-- íŒ¨ë°°í–ˆìŠµë‹ˆë‹¤ -->>");
 		else
 			if(this.teamFlag == true)
-				System.out.println("  <<-- ÆĞ¹èÇß½À´Ï´Ù -->>");
+				System.out.println("  <<-- íŒ¨ë°°í–ˆìŠµë‹ˆë‹¤ -->>");
 			else
-				System.out.println("  <<== ½Â¸®Çß½À´Ï´Ù ==>>");
+				System.out.println("  <<== ìŠ¹ë¦¬í–ˆìŠµë‹ˆë‹¤ ==>>");
 		this.showScore();
 	}
 	
-	// GameApp() Å¬·¡½ºÀÇ »ı¼ºÀÚ
+	// GameApp() í´ë˜ìŠ¤ì˜ ìƒì„±ì
 	public GameApp() throws IOException {
-		team1 = saveTeam("Team1.txt");	// Team °´Ã¼ team1¿¡ ÇÑÈ­ ÀÌ±Û½º ÀúÀå
-		team2 = saveTeam("Team2.txt");	// Team °´Ã¼ team2¿¡ ¿¤Áö Æ®À©½º ÀúÀå
-		String signal;		// ÆÀÀ» ¼±ÅÃÇÑ signal º¯¼ö »ı¼º
+		team1 = saveTeam("Team1.txt");	// Team ê°ì²´ team1ì— í•œí™” ì´ê¸€ìŠ¤ ì €ì¥
+		team2 = saveTeam("Team2.txt");	// Team ê°ì²´ team2ì— ì—˜ì§€ íŠ¸ìœˆìŠ¤ ì €ì¥
+		String signal;		// íŒ€ì„ ì„ íƒí•œ signal ë³€ìˆ˜ ìƒì„±
 		
 		while(true) {
-			System.out.println("ÆÀÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.\n(1) ÇÑÈ­ ÀÌ±Û½º(Away)\n(2) ¿¤Áö Æ®À©½º(Home)");	 // ÆÀ ¼±ÅÃ
+			System.out.println("íŒ€ì„ ì„ íƒí•´ì£¼ì„¸ìš”.\n(1) í•œí™” ì´ê¸€ìŠ¤(Away)\n(2) ì—˜ì§€ íŠ¸ìœˆìŠ¤(Home)");	 // íŒ€ ì„ íƒ
 			System.out.print(" >> ");
 			
 
 			Scanner scan1 = new Scanner(System.in);
 			signal = scan1.next();
 			
-			if(signal.equals("1")) {			// 1¹ø -> ÇÑÈ­ ÀÌ±Û½º
-				team1.printPlayer("ÇÑÈ­ ÀÌ±Û½º");
+			if(signal.equals("1")) {			// 1ë²ˆ -> í•œí™” ì´ê¸€ìŠ¤
+				team1.printPlayer("í•œí™” ì´ê¸€ìŠ¤");
 				break;
 			}
-			else if(signal.equals("2")) {	// 2¹ø -> ¿¤Áö Æ®À©½º
-				team2.printPlayer("¿¤Áö Æ®À©½º");
-				this.teamFlag = false;	// true·Î ¼³Á¤µÈ teamFlag¸¦ false·Î º¯°æ
+			else if(signal.equals("2")) {	// 2ë²ˆ -> ì—˜ì§€ íŠ¸ìœˆìŠ¤
+				team2.printPlayer("ì—˜ì§€ íŠ¸ìœˆìŠ¤");
+				this.teamFlag = false;	// trueë¡œ ì„¤ì •ëœ teamFlagë¥¼ falseë¡œ ë³€ê²½
 				break;
 			}
-			else {	// 1¹øµµ 2¹øµµ ¾Æ´Ñ ´Ù¸¥ Å°¸¦ ÀÔ·ÂÇßÀ» ¶§
-				System.out.println(" $ ÀÔ·ÂÀÌ ¿Ã¹Ù¸£Áö ¾Ê½À´Ï´Ù. ¼ıÀÚ 1 ¶Ç´Â 2¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			else {	// 1ë²ˆë„ 2ë²ˆë„ ì•„ë‹Œ ë‹¤ë¥¸ í‚¤ë¥¼ ì…ë ¥í–ˆì„ ë•Œ
+				System.out.println(" $ ì…ë ¥ì´ ì˜¬ë°”ë¥´ì§€ ì•ŠìŠµë‹ˆë‹¤. ìˆ«ì 1 ë˜ëŠ” 2ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				continue;
 			}
 		}
 
-		System.out.print("°ÔÀÓÀ» ÁøÇàÇÒ ÀÌ´×À» ÀÔ·ÂÇØÁÖ¼¼¿ä >> ");
+		System.out.print("ê²Œì„ì„ ì§„í–‰í•  ì´ë‹ì„ ì…ë ¥í•´ì£¼ì„¸ìš” >> ");
 		Scanner scan2 = new Scanner(System.in);
 		signal = scan2.next();
 		this.inning = Integer.parseInt(signal);
-		System.out.println("°ÔÀÓ ÀÌ´× : "+signal);
+		System.out.println("ê²Œì„ ì´ë‹ : "+signal);
 		
-		if(this.teamFlag == true) {	// ÇÑÈ­ ÀÌ±Û½º ¼±ÅÃ
-			while(gameinning <= this.inning) {	// »ç¿ëÀÚ°¡ Á¤ÇÑ ÀÌ´×¸¸Å­¸¸ °ÔÀÓ ÁøÇà
+		if(this.teamFlag == true) {	// í•œí™” ì´ê¸€ìŠ¤ ì„ íƒ
+			while(gameinning <= this.inning) {	// ì‚¬ìš©ìê°€ ì •í•œ ì´ë‹ë§Œí¼ë§Œ ê²Œì„ ì§„í–‰
 				this.Attack();
-				// ¿øÁ¤ÆÀÀÇ ¸¶Áö¸· ÀÌ´× °ø°İÀÌ ³¡³µ´Âµ¥ È¨ÆÀº¸´Ù Á¡¼ö°¡ ³·´Ù¸é 
+				// ì›ì •íŒ€ì˜ ë§ˆì§€ë§‰ ì´ë‹ ê³µê²©ì´ ëë‚¬ëŠ”ë° í™ˆíŒ€ë³´ë‹¤ ì ìˆ˜ê°€ ë‚®ë‹¤ë©´ 
 				if((this.gameinning == this.inning) && (this.score_team1 < this.score_team2))
 					break;
 				this.Defense();
 				this.gameinning++;
 			}
 		}
-		else {	// ¿¤Áö Æ®À©½º ¼±ÅÃ
-			while(gameinning <= this.inning) {	// »ç¿ëÀÚ°¡ Á¤ÇÑ ÀÌ´×¸¸Å­¸¸ °ÔÀÓ ÁøÇà
+		else {	// ì—˜ì§€ íŠ¸ìœˆìŠ¤ ì„ íƒ
+			while(gameinning <= this.inning) {	// ì‚¬ìš©ìê°€ ì •í•œ ì´ë‹ë§Œí¼ë§Œ ê²Œì„ ì§„í–‰
 				this.Defense();
-				// ¿øÁ¤ÆÀÀÇ ¸¶Áö¸· ÀÌ´× °ø°İÀÌ ³¡³µ´Âµ¥ È¨ÆÀº¸´Ù Á¡¼ö°¡ ³·´Ù¸é 
+				// ì›ì •íŒ€ì˜ ë§ˆì§€ë§‰ ì´ë‹ ê³µê²©ì´ ëë‚¬ëŠ”ë° í™ˆíŒ€ë³´ë‹¤ ì ìˆ˜ê°€ ë‚®ë‹¤ë©´ 
 				if((this.gameinning == this.inning) && (this.score_team1 < this.score_team2))
 					break;
 				this.Attack();
@@ -619,10 +617,10 @@ public class GameApp {
 			}
 		}
 		
-		// °æ±â Á¾·á
-		System.out.println("\n\n << °æ±â°¡ Á¾·áµÇ¾ú½À´Ï´Ù >> ");
-		this.showResult();			// °æ±â °á°ú Ãâ·Â
-		if(this.teamFlag == true)	// »ç¿ëÀÚ°¡ ¼±ÅÃÇÑ ÆÀ ¼±¼öµéÀÇ ´çÀÏ ±â·Ï Ãâ·Â
+		// ê²½ê¸° ì¢…ë£Œ
+		System.out.println("\n\n << ê²½ê¸°ê°€ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤ >> ");
+		this.showResult();			// ê²½ê¸° ê²°ê³¼ ì¶œë ¥
+		if(this.teamFlag == true)	// ì‚¬ìš©ìê°€ ì„ íƒí•œ íŒ€ ì„ ìˆ˜ë“¤ì˜ ë‹¹ì¼ ê¸°ë¡ ì¶œë ¥
 			team1.printRecord();
 		else
 			team2.printRecord();
